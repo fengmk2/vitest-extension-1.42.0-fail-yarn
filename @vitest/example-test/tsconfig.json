@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig-base",
+  "include": ["src/**/*", "src/**/*.json"],
+  "compilerOptions": {
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "rootDir": "src",
+    "types": ["node", "@testing-library/jest-dom"]
+  },
+  // Tests and storybook are not excluded,
+  // but their output is ignored with dist/.npmignore
+  "exclude": []
+}

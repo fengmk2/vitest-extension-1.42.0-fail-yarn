@@ -9,12 +9,13 @@ export default defineConfig({
       5 /* minutes */ *
       60 /* seconds / minute */ *
       1000 /* milliseconds / second */,
-    include: ["packages/**/*.test.[jt]s?(x)"],
+    setupFiles: ["./testSetup.js"],
+    include: ["@vitest/**/*.test.[jt]s?(x)"],
     coverage: {
       provider: "istanbul",
       reportOnFailure: true,
       reporter: ["text", "text-summary", "html"],
-      include: ["packages/**/*.{js,jsx,ts,tsx}"],
+      include: ["@vitest/**/*.{js,jsx,ts,tsx}"],
       thresholds: {
         statements: 75,
         lines: 75,
