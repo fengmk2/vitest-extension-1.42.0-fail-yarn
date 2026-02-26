@@ -21,6 +21,7 @@ const RAW_RUNTIME_STATE =
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
+  "pnpZipBackend": "libzip",\
   "fallbackExclusionList": [\
     ["@vitest/example-test", ["workspace:@vitest/example-test"]],\
     ["vitest-fail-yarn", ["workspace:."]]\
@@ -37,15 +38,23 @@ const RAW_RUNTIME_STATE =
           ["jsdom", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0"],\
           ["sass-embedded", "npm:1.97.3"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
-          ["vite", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:7.3.1"],\
-          ["vitest", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:3.2.4"]\
+          ["vite", [\
+            "@voidzero-dev/vite-plus-core",\
+            "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136"\
+          ]],\
+          ["vite-plus", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["vitest", [\
+            "@voidzero-dev/vite-plus-test",\
+            "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136"\
+          ]],\
+          ["vitest-fail-yarn", "workspace:."]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
     ["@acemir/cssom", [\
       ["npm:0.9.31", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@acemir-cssom-npm-0.9.31-806e8cd7a7-10c0.zip/node_modules/@acemir/cssom/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@acemir-cssom-npm-0.9.31-806e8cd7a7-10c0.zip/node_modules/@acemir/cssom/",\
         "packageDependencies": [\
           ["@acemir/cssom", "npm:0.9.31"]\
         ],\
@@ -54,7 +63,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@adobe/css-tools", [\
       ["npm:4.4.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@adobe-css-tools-npm-4.4.4-a2900386bf-10c0.zip/node_modules/@adobe/css-tools/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@adobe-css-tools-npm-4.4.4-a2900386bf-10c0.zip/node_modules/@adobe/css-tools/",\
         "packageDependencies": [\
           ["@adobe/css-tools", "npm:4.4.4"]\
         ],\
@@ -63,7 +72,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@asamuzakjp/css-color", [\
       ["npm:4.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@asamuzakjp-css-color-npm-4.1.2-585025f523-10c0.zip/node_modules/@asamuzakjp/css-color/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@asamuzakjp-css-color-npm-4.1.2-585025f523-10c0.zip/node_modules/@asamuzakjp/css-color/",\
         "packageDependencies": [\
           ["@asamuzakjp/css-color", "npm:4.1.2"],\
           ["@csstools/css-calc", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:3.0.0"],\
@@ -77,7 +86,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@asamuzakjp/dom-selector", [\
       ["npm:6.7.8", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@asamuzakjp-dom-selector-npm-6.7.8-f92d77c3b1-10c0.zip/node_modules/@asamuzakjp/dom-selector/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@asamuzakjp-dom-selector-npm-6.7.8-f92d77c3b1-10c0.zip/node_modules/@asamuzakjp/dom-selector/",\
         "packageDependencies": [\
           ["@asamuzakjp/dom-selector", "npm:6.7.8"],\
           ["@asamuzakjp/nwsapi", "npm:2.3.9"],\
@@ -91,7 +100,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@asamuzakjp/nwsapi", [\
       ["npm:2.3.9", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@asamuzakjp-nwsapi-npm-2.3.9-9247524c07-10c0.zip/node_modules/@asamuzakjp/nwsapi/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@asamuzakjp-nwsapi-npm-2.3.9-9247524c07-10c0.zip/node_modules/@asamuzakjp/nwsapi/",\
         "packageDependencies": [\
           ["@asamuzakjp/nwsapi", "npm:2.3.9"]\
         ],\
@@ -100,7 +109,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@bufbuild/protobuf", [\
       ["npm:2.11.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@bufbuild-protobuf-npm-2.11.0-2f694db663-10c0.zip/node_modules/@bufbuild/protobuf/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@bufbuild-protobuf-npm-2.11.0-2f694db663-10c0.zip/node_modules/@bufbuild/protobuf/",\
         "packageDependencies": [\
           ["@bufbuild/protobuf", "npm:2.11.0"]\
         ],\
@@ -109,7 +118,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@csstools/color-helpers", [\
       ["npm:6.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-color-helpers-npm-6.0.1-b1117e19b1-10c0.zip/node_modules/@csstools/color-helpers/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@csstools-color-helpers-npm-6.0.1-b1117e19b1-10c0.zip/node_modules/@csstools/color-helpers/",\
         "packageDependencies": [\
           ["@csstools/color-helpers", "npm:6.0.1"]\
         ],\
@@ -118,14 +127,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@csstools/css-calc", [\
       ["npm:3.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-calc-npm-3.0.0-42358f46db-10c0.zip/node_modules/@csstools/css-calc/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@csstools-css-calc-npm-3.0.0-42358f46db-10c0.zip/node_modules/@csstools/css-calc/",\
         "packageDependencies": [\
           ["@csstools/css-calc", "npm:3.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:3.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/@csstools-css-calc-virtual-1b651469d0/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-calc-npm-3.0.0-42358f46db-10c0.zip/node_modules/@csstools/css-calc/",\
+        "packageLocation": "./.yarn/__virtual__/@csstools-css-calc-virtual-1b651469d0/5/.yarn/berry/cache/@csstools-css-calc-npm-3.0.0-42358f46db-10c0.zip/node_modules/@csstools/css-calc/",\
         "packageDependencies": [\
           ["@csstools/css-calc", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:3.0.0"],\
           ["@csstools/css-parser-algorithms", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.0"],\
@@ -144,18 +153,18 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@csstools/css-color-parser", [\
       ["npm:4.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-color-parser-npm-4.0.1-b4cc5b75bc-10c0.zip/node_modules/@csstools/css-color-parser/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@csstools-css-color-parser-npm-4.0.1-b4cc5b75bc-10c0.zip/node_modules/@csstools/css-color-parser/",\
         "packageDependencies": [\
           ["@csstools/css-color-parser", "npm:4.0.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@csstools-css-color-parser-virtual-c6bcb77574/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-color-parser-npm-4.0.1-b4cc5b75bc-10c0.zip/node_modules/@csstools/css-color-parser/",\
+        "packageLocation": "./.yarn/__virtual__/@csstools-css-color-parser-virtual-c6bcb77574/5/.yarn/berry/cache/@csstools-css-color-parser-npm-4.0.1-b4cc5b75bc-10c0.zip/node_modules/@csstools/css-color-parser/",\
         "packageDependencies": [\
-          ["@csstools/css-color-parser", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.1"],\
           ["@csstools/color-helpers", "npm:6.0.1"],\
           ["@csstools/css-calc", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:3.0.0"],\
+          ["@csstools/css-color-parser", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.1"],\
           ["@csstools/css-parser-algorithms", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.0"],\
           ["@csstools/css-tokenizer", "npm:4.0.0"],\
           ["@types/csstools__css-parser-algorithms", null],\
@@ -172,14 +181,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@csstools/css-parser-algorithms", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-parser-algorithms-npm-4.0.0-31b0851d2f-10c0.zip/node_modules/@csstools/css-parser-algorithms/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@csstools-css-parser-algorithms-npm-4.0.0-31b0851d2f-10c0.zip/node_modules/@csstools/css-parser-algorithms/",\
         "packageDependencies": [\
           ["@csstools/css-parser-algorithms", "npm:4.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/@csstools-css-parser-algorithms-virtual-eab76b1e62/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-parser-algorithms-npm-4.0.0-31b0851d2f-10c0.zip/node_modules/@csstools/css-parser-algorithms/",\
+        "packageLocation": "./.yarn/__virtual__/@csstools-css-parser-algorithms-virtual-eab76b1e62/5/.yarn/berry/cache/@csstools-css-parser-algorithms-npm-4.0.0-31b0851d2f-10c0.zip/node_modules/@csstools/css-parser-algorithms/",\
         "packageDependencies": [\
           ["@csstools/css-parser-algorithms", "virtual:585025f5234635279c140770b16cae92486a7722575202863ffe85b75e300ebef38d63f0a81c6857e2d75a35b9af27d22074f5ed6b0d56b27f5d2914bd909b74#npm:4.0.0"],\
           ["@csstools/css-tokenizer", "npm:4.0.0"],\
@@ -194,7 +203,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@csstools/css-syntax-patches-for-csstree", [\
       ["npm:1.0.26", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-syntax-patches-for-csstree-npm-1.0.26-29e510b2e1-10c0.zip/node_modules/@csstools/css-syntax-patches-for-csstree/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@csstools-css-syntax-patches-for-csstree-npm-1.0.26-29e510b2e1-10c0.zip/node_modules/@csstools/css-syntax-patches-for-csstree/",\
         "packageDependencies": [\
           ["@csstools/css-syntax-patches-for-csstree", "npm:1.0.26"]\
         ],\
@@ -203,257 +212,23 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@csstools/css-tokenizer", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@csstools-css-tokenizer-npm-4.0.0-ad04e84b3b-10c0.zip/node_modules/@csstools/css-tokenizer/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@csstools-css-tokenizer-npm-4.0.0-ad04e84b3b-10c0.zip/node_modules/@csstools/css-tokenizer/",\
         "packageDependencies": [\
           ["@csstools/css-tokenizer", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@esbuild/aix-ppc64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-aix-ppc64-npm-0.27.3-28583f301d/node_modules/@esbuild/aix-ppc64/",\
-        "packageDependencies": [\
-          ["@esbuild/aix-ppc64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/android-arm", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-android-arm-npm-0.27.3-a9020951d9/node_modules/@esbuild/android-arm/",\
-        "packageDependencies": [\
-          ["@esbuild/android-arm", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/android-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-android-arm64-npm-0.27.3-3d7f480203/node_modules/@esbuild/android-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/android-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/android-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-android-x64-npm-0.27.3-c71d5a3153/node_modules/@esbuild/android-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/android-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/darwin-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-darwin-arm64-npm-0.27.3-4c8fed986d/node_modules/@esbuild/darwin-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/darwin-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/darwin-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-darwin-x64-npm-0.27.3-f27535b6d7/node_modules/@esbuild/darwin-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/darwin-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/freebsd-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-freebsd-arm64-npm-0.27.3-9b167bbc41/node_modules/@esbuild/freebsd-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/freebsd-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/freebsd-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-freebsd-x64-npm-0.27.3-41645c0759/node_modules/@esbuild/freebsd-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/freebsd-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-arm", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-arm-npm-0.27.3-49bd02d78a/node_modules/@esbuild/linux-arm/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-arm", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-arm64-npm-0.27.3-a9fedc262b/node_modules/@esbuild/linux-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-ia32", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-ia32-npm-0.27.3-f45d477f3e/node_modules/@esbuild/linux-ia32/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-ia32", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-loong64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-loong64-npm-0.27.3-88ac081187/node_modules/@esbuild/linux-loong64/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-loong64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-mips64el", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-mips64el-npm-0.27.3-366a446ba9/node_modules/@esbuild/linux-mips64el/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-mips64el", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-ppc64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-ppc64-npm-0.27.3-abfa4eb56e/node_modules/@esbuild/linux-ppc64/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-ppc64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-riscv64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-riscv64-npm-0.27.3-fe0b457682/node_modules/@esbuild/linux-riscv64/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-riscv64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-s390x", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-s390x-npm-0.27.3-a3901c1419/node_modules/@esbuild/linux-s390x/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-s390x", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/linux-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-linux-x64-npm-0.27.3-2041dd7b27/node_modules/@esbuild/linux-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/linux-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/netbsd-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-netbsd-arm64-npm-0.27.3-e62baa2b8c/node_modules/@esbuild/netbsd-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/netbsd-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/netbsd-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-netbsd-x64-npm-0.27.3-04c8b6bf87/node_modules/@esbuild/netbsd-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/netbsd-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/openbsd-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-openbsd-arm64-npm-0.27.3-f249832d7a/node_modules/@esbuild/openbsd-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/openbsd-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/openbsd-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-openbsd-x64-npm-0.27.3-1270973fae/node_modules/@esbuild/openbsd-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/openbsd-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/openharmony-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-openharmony-arm64-npm-0.27.3-ef55456c0b/node_modules/@esbuild/openharmony-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/openharmony-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/sunos-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-sunos-x64-npm-0.27.3-b9cf8f5e3b/node_modules/@esbuild/sunos-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/sunos-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/win32-arm64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-win32-arm64-npm-0.27.3-4efe5a15ad/node_modules/@esbuild/win32-arm64/",\
-        "packageDependencies": [\
-          ["@esbuild/win32-arm64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/win32-ia32", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-win32-ia32-npm-0.27.3-bfe05b431c/node_modules/@esbuild/win32-ia32/",\
-        "packageDependencies": [\
-          ["@esbuild/win32-ia32", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@esbuild/win32-x64", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/@esbuild-win32-x64-npm-0.27.3-c6a1294f67/node_modules/@esbuild/win32-x64/",\
-        "packageDependencies": [\
-          ["@esbuild/win32-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@exodus/bytes", [\
       ["npm:1.11.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@exodus-bytes-npm-1.11.0-e01d4ce8b3-10c0.zip/node_modules/@exodus/bytes/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@exodus-bytes-npm-1.11.0-e01d4ce8b3-10c0.zip/node_modules/@exodus/bytes/",\
         "packageDependencies": [\
           ["@exodus/bytes", "npm:1.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:9e7c9550c969468956daaefc85c082f4c3c20c9703d0e98273e44416b6b9c2e9f4d05648b142b8118327316be05f39bcc685ee38ad8289578b5ce6b1073abf81#npm:1.11.0", {\
-        "packageLocation": "./.yarn/__virtual__/@exodus-bytes-virtual-ce952936f7/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@exodus-bytes-npm-1.11.0-e01d4ce8b3-10c0.zip/node_modules/@exodus/bytes/",\
+        "packageLocation": "./.yarn/__virtual__/@exodus-bytes-virtual-ce952936f7/5/.yarn/berry/cache/@exodus-bytes-npm-1.11.0-e01d4ce8b3-10c0.zip/node_modules/@exodus/bytes/",\
         "packageDependencies": [\
           ["@exodus/bytes", "virtual:9e7c9550c969468956daaefc85c082f4c3c20c9703d0e98273e44416b6b9c2e9f4d05648b142b8118327316be05f39bcc685ee38ad8289578b5ce6b1073abf81#npm:1.11.0"],\
           ["@noble/hashes", null],\
@@ -468,7 +243,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@isaacs/balanced-match", [\
       ["npm:4.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@isaacs-balanced-match-npm-4.0.1-8965afafe6-10c0.zip/node_modules/@isaacs/balanced-match/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@isaacs-balanced-match-npm-4.0.1-8965afafe6-10c0.zip/node_modules/@isaacs/balanced-match/",\
         "packageDependencies": [\
           ["@isaacs/balanced-match", "npm:4.0.1"]\
         ],\
@@ -477,17 +252,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@isaacs/brace-expansion", [\
       ["npm:5.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@isaacs-brace-expansion-npm-5.0.1-79f48d6db7-10c0.zip/node_modules/@isaacs/brace-expansion/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@isaacs-brace-expansion-npm-5.0.1-79f48d6db7-10c0.zip/node_modules/@isaacs/brace-expansion/",\
         "packageDependencies": [\
-          ["@isaacs/brace-expansion", "npm:5.0.1"],\
-          ["@isaacs/balanced-match", "npm:4.0.1"]\
+          ["@isaacs/balanced-match", "npm:4.0.1"],\
+          ["@isaacs/brace-expansion", "npm:5.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@isaacs/fs-minipass", [\
       ["npm:4.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@isaacs-fs-minipass-npm-4.0.1-677026e841-10c0.zip/node_modules/@isaacs/fs-minipass/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@isaacs-fs-minipass-npm-4.0.1-677026e841-10c0.zip/node_modules/@isaacs/fs-minipass/",\
         "packageDependencies": [\
           ["@isaacs/fs-minipass", "npm:4.0.1"],\
           ["minipass", "npm:7.1.2"]\
@@ -495,18 +270,9 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@jridgewell/sourcemap-codec", [\
-      ["npm:1.5.5", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@jridgewell-sourcemap-codec-npm-1.5.5-5189d9fc79-10c0.zip/node_modules/@jridgewell/sourcemap-codec/",\
-        "packageDependencies": [\
-          ["@jridgewell/sourcemap-codec", "npm:1.5.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@npmcli/agent", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@npmcli-agent-npm-4.0.0-502e5ae4f0-10c0.zip/node_modules/@npmcli/agent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@npmcli-agent-npm-4.0.0-502e5ae4f0-10c0.zip/node_modules/@npmcli/agent/",\
         "packageDependencies": [\
           ["@npmcli/agent", "npm:4.0.0"],\
           ["agent-base", "npm:7.1.4"],\
@@ -520,10 +286,424 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@npmcli/fs", [\
       ["npm:5.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@npmcli-fs-npm-5.0.0-9d737ae2f3-10c0.zip/node_modules/@npmcli/fs/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@npmcli-fs-npm-5.0.0-9d737ae2f3-10c0.zip/node_modules/@npmcli/fs/",\
         "packageDependencies": [\
           ["@npmcli/fs", "npm:5.0.0"],\
           ["semver", "npm:7.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-project/runtime", [\
+      ["npm:0.114.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@oxc-project-runtime-npm-0.114.0-0563742d94-10c0.zip/node_modules/@oxc-project/runtime/",\
+        "packageDependencies": [\
+          ["@oxc-project/runtime", "npm:0.114.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-project/types", [\
+      ["npm:0.114.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@oxc-project-types-npm-0.114.0-dcccbc37f9-10c0.zip/node_modules/@oxc-project/types/",\
+        "packageDependencies": [\
+          ["@oxc-project/types", "npm:0.114.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-android-arm-eabi", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-android-arm-eabi-npm-0.35.0-baa0292b48/node_modules/@oxfmt/binding-android-arm-eabi/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-android-arm-eabi", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-android-arm64", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-android-arm64-npm-0.35.0-23dbdeda60/node_modules/@oxfmt/binding-android-arm64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-android-arm64", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-darwin-arm64", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-darwin-arm64-npm-0.35.0-be089d821c/node_modules/@oxfmt/binding-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-darwin-arm64", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-darwin-x64", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-darwin-x64-npm-0.35.0-90e08cea5d/node_modules/@oxfmt/binding-darwin-x64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-darwin-x64", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-freebsd-x64", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-freebsd-x64-npm-0.35.0-552a3beed3/node_modules/@oxfmt/binding-freebsd-x64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-freebsd-x64", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm-gnueabihf", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm-gnueabihf-npm-0.35.0-00c2cfab66/node_modules/@oxfmt/binding-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm-gnueabihf", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm-musleabihf", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm-musleabihf-npm-0.35.0-e7590bee20/node_modules/@oxfmt/binding-linux-arm-musleabihf/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm-musleabihf", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm64-gnu", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm64-gnu-npm-0.35.0-c994e04f74/node_modules/@oxfmt/binding-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm64-gnu", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm64-musl", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm64-musl-npm-0.35.0-b0e7cfdc29/node_modules/@oxfmt/binding-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm64-musl", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-ppc64-gnu", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-ppc64-gnu-npm-0.35.0-130a18c937/node_modules/@oxfmt/binding-linux-ppc64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-ppc64-gnu", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-riscv64-gnu", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-riscv64-gnu-npm-0.35.0-a044db5234/node_modules/@oxfmt/binding-linux-riscv64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-riscv64-gnu", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-riscv64-musl", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-riscv64-musl-npm-0.35.0-c5744fc39f/node_modules/@oxfmt/binding-linux-riscv64-musl/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-riscv64-musl", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-s390x-gnu", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-s390x-gnu-npm-0.35.0-ec4bfb40a7/node_modules/@oxfmt/binding-linux-s390x-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-s390x-gnu", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-x64-gnu", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-x64-gnu-npm-0.35.0-19db9368ab/node_modules/@oxfmt/binding-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-x64-gnu", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-x64-musl", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-x64-musl-npm-0.35.0-1ff3662d06/node_modules/@oxfmt/binding-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-x64-musl", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-openharmony-arm64", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-openharmony-arm64-npm-0.35.0-61720c580d/node_modules/@oxfmt/binding-openharmony-arm64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-openharmony-arm64", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-win32-arm64-msvc", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-win32-arm64-msvc-npm-0.35.0-99a0f4a3dc/node_modules/@oxfmt/binding-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-win32-arm64-msvc", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-win32-ia32-msvc", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-win32-ia32-msvc-npm-0.35.0-cbb61f7ca1/node_modules/@oxfmt/binding-win32-ia32-msvc/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-win32-ia32-msvc", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-win32-x64-msvc", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-win32-x64-msvc-npm-0.35.0-978bfa5969/node_modules/@oxfmt/binding-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-win32-x64-msvc", "npm:0.35.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint-tsgolint/darwin-arm64", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-tsgolint-darwin-arm64-npm-0.15.0-a9066b0246/node_modules/@oxlint-tsgolint/darwin-arm64/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/darwin-arm64", "npm:0.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint-tsgolint/darwin-x64", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-tsgolint-darwin-x64-npm-0.15.0-7d71e7a61b/node_modules/@oxlint-tsgolint/darwin-x64/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/darwin-x64", "npm:0.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint-tsgolint/linux-arm64", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-tsgolint-linux-arm64-npm-0.15.0-1b165a31d0/node_modules/@oxlint-tsgolint/linux-arm64/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/linux-arm64", "npm:0.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint-tsgolint/linux-x64", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-tsgolint-linux-x64-npm-0.15.0-821c640e0a/node_modules/@oxlint-tsgolint/linux-x64/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/linux-x64", "npm:0.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint-tsgolint/win32-arm64", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-tsgolint-win32-arm64-npm-0.15.0-9e34299bd8/node_modules/@oxlint-tsgolint/win32-arm64/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/win32-arm64", "npm:0.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint-tsgolint/win32-x64", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-tsgolint-win32-x64-npm-0.15.0-297ffe4e44/node_modules/@oxlint-tsgolint/win32-x64/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/win32-x64", "npm:0.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-android-arm-eabi", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-android-arm-eabi-npm-1.50.0-e084812af4/node_modules/@oxlint/binding-android-arm-eabi/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-android-arm-eabi", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-android-arm64", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-android-arm64-npm-1.50.0-9df61aaa73/node_modules/@oxlint/binding-android-arm64/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-android-arm64", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-darwin-arm64", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-darwin-arm64-npm-1.50.0-3454beac08/node_modules/@oxlint/binding-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-darwin-arm64", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-darwin-x64", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-darwin-x64-npm-1.50.0-475ea83b3e/node_modules/@oxlint/binding-darwin-x64/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-darwin-x64", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-freebsd-x64", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-freebsd-x64-npm-1.50.0-de011ad1cf/node_modules/@oxlint/binding-freebsd-x64/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-freebsd-x64", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-arm-gnueabihf", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-arm-gnueabihf-npm-1.50.0-c2f112f5e9/node_modules/@oxlint/binding-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-arm-gnueabihf", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-arm-musleabihf", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-arm-musleabihf-npm-1.50.0-328bb2e261/node_modules/@oxlint/binding-linux-arm-musleabihf/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-arm-musleabihf", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-arm64-gnu", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-arm64-gnu-npm-1.50.0-1ba0602439/node_modules/@oxlint/binding-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-arm64-gnu", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-arm64-musl", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-arm64-musl-npm-1.50.0-57b8a4cd08/node_modules/@oxlint/binding-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-arm64-musl", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-ppc64-gnu", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-ppc64-gnu-npm-1.50.0-e88e8dce77/node_modules/@oxlint/binding-linux-ppc64-gnu/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-ppc64-gnu", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-riscv64-gnu", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-riscv64-gnu-npm-1.50.0-e549194b57/node_modules/@oxlint/binding-linux-riscv64-gnu/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-riscv64-gnu", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-riscv64-musl", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-riscv64-musl-npm-1.50.0-b4855594b4/node_modules/@oxlint/binding-linux-riscv64-musl/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-riscv64-musl", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-s390x-gnu", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-s390x-gnu-npm-1.50.0-6094177e09/node_modules/@oxlint/binding-linux-s390x-gnu/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-s390x-gnu", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-x64-gnu", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-x64-gnu-npm-1.50.0-c5c84d4d5d/node_modules/@oxlint/binding-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-x64-gnu", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-linux-x64-musl", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-linux-x64-musl-npm-1.50.0-2a0afbc239/node_modules/@oxlint/binding-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-linux-x64-musl", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-openharmony-arm64", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-openharmony-arm64-npm-1.50.0-7b9f432616/node_modules/@oxlint/binding-openharmony-arm64/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-openharmony-arm64", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-win32-arm64-msvc", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-win32-arm64-msvc-npm-1.50.0-4ac42687ec/node_modules/@oxlint/binding-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-win32-arm64-msvc", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-win32-ia32-msvc", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-win32-ia32-msvc-npm-1.50.0-643fb3195c/node_modules/@oxlint/binding-win32-ia32-msvc/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-win32-ia32-msvc", "npm:1.50.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxlint/binding-win32-x64-msvc", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxlint-binding-win32-x64-msvc-npm-1.50.0-874ede6d94/node_modules/@oxlint/binding-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-win32-x64-msvc", "npm:1.50.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -672,237 +852,30 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@rollup/rollup-android-arm-eabi", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm-eabi-npm-4.57.1-863e32338f/node_modules/@rollup/rollup-android-arm-eabi/",\
+    ["@polka/url", [\
+      ["npm:1.0.0-next.29", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@polka-url-npm-1.0.0-next.29-b32b372106-10c0.zip/node_modules/@polka/url/",\
         "packageDependencies": [\
-          ["@rollup/rollup-android-arm-eabi", "npm:4.57.1"]\
+          ["@polka/url", "npm:1.0.0-next.29"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@rollup/rollup-android-arm64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm64-npm-4.57.1-7ed4203045/node_modules/@rollup/rollup-android-arm64/",\
+    ["@standard-schema/spec", [\
+      ["npm:1.1.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@standard-schema-spec-npm-1.1.0-d3e5ccd2e2-10c0.zip/node_modules/@standard-schema/spec/",\
         "packageDependencies": [\
-          ["@rollup/rollup-android-arm64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-darwin-arm64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-darwin-arm64-npm-4.57.1-30fcad3f8c/node_modules/@rollup/rollup-darwin-arm64/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-darwin-arm64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-darwin-x64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-darwin-x64-npm-4.57.1-a79270fa64/node_modules/@rollup/rollup-darwin-x64/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-darwin-x64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-freebsd-arm64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-freebsd-arm64-npm-4.57.1-b9bb12b370/node_modules/@rollup/rollup-freebsd-arm64/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-freebsd-arm64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-freebsd-x64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-freebsd-x64-npm-4.57.1-8149f935c1/node_modules/@rollup/rollup-freebsd-x64/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-freebsd-x64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-arm-gnueabihf", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm-gnueabihf-npm-4.57.1-d5016cee83/node_modules/@rollup/rollup-linux-arm-gnueabihf/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-arm-gnueabihf", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-arm-musleabihf", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm-musleabihf-npm-4.57.1-e7aae05133/node_modules/@rollup/rollup-linux-arm-musleabihf/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-arm-musleabihf", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-arm64-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm64-gnu-npm-4.57.1-fd27dea33b/node_modules/@rollup/rollup-linux-arm64-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-arm64-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-arm64-musl", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm64-musl-npm-4.57.1-3dce1fd7b1/node_modules/@rollup/rollup-linux-arm64-musl/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-arm64-musl", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-loong64-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-loong64-gnu-npm-4.57.1-8bfc6e45e7/node_modules/@rollup/rollup-linux-loong64-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-loong64-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-loong64-musl", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-loong64-musl-npm-4.57.1-5b1dd84556/node_modules/@rollup/rollup-linux-loong64-musl/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-loong64-musl", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-ppc64-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-ppc64-gnu-npm-4.57.1-24f5b141f5/node_modules/@rollup/rollup-linux-ppc64-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-ppc64-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-ppc64-musl", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-ppc64-musl-npm-4.57.1-1d68622d26/node_modules/@rollup/rollup-linux-ppc64-musl/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-ppc64-musl", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-riscv64-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-riscv64-gnu-npm-4.57.1-aa0ff0e1e3/node_modules/@rollup/rollup-linux-riscv64-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-riscv64-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-riscv64-musl", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-riscv64-musl-npm-4.57.1-6c2605403a/node_modules/@rollup/rollup-linux-riscv64-musl/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-riscv64-musl", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-s390x-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-s390x-gnu-npm-4.57.1-0ecc110447/node_modules/@rollup/rollup-linux-s390x-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-s390x-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-x64-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-x64-gnu-npm-4.57.1-667d72ac2f/node_modules/@rollup/rollup-linux-x64-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-x64-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-linux-x64-musl", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-x64-musl-npm-4.57.1-1bc4af3cb5/node_modules/@rollup/rollup-linux-x64-musl/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-linux-x64-musl", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-openbsd-x64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-openbsd-x64-npm-4.57.1-5b7bbf2636/node_modules/@rollup/rollup-openbsd-x64/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-openbsd-x64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-openharmony-arm64", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-openharmony-arm64-npm-4.57.1-9e74f6c65f/node_modules/@rollup/rollup-openharmony-arm64/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-openharmony-arm64", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-win32-arm64-msvc", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-arm64-msvc-npm-4.57.1-36312bb667/node_modules/@rollup/rollup-win32-arm64-msvc/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-win32-arm64-msvc", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-win32-ia32-msvc", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-ia32-msvc-npm-4.57.1-beec028dca/node_modules/@rollup/rollup-win32-ia32-msvc/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-win32-ia32-msvc", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-win32-x64-gnu", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-x64-gnu-npm-4.57.1-ab351abab0/node_modules/@rollup/rollup-win32-x64-gnu/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-win32-x64-gnu", "npm:4.57.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@rollup/rollup-win32-x64-msvc", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-x64-msvc-npm-4.57.1-57e2356b3a/node_modules/@rollup/rollup-win32-x64-msvc/",\
-        "packageDependencies": [\
-          ["@rollup/rollup-win32-x64-msvc", "npm:4.57.1"]\
+          ["@standard-schema/spec", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@testing-library/jest-dom", [\
       ["npm:6.9.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@testing-library-jest-dom-npm-6.9.1-125d97d1a5-10c0.zip/node_modules/@testing-library/jest-dom/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@testing-library-jest-dom-npm-6.9.1-125d97d1a5-10c0.zip/node_modules/@testing-library/jest-dom/",\
         "packageDependencies": [\
-          ["@testing-library/jest-dom", "npm:6.9.1"],\
           ["@adobe/css-tools", "npm:4.4.4"],\
+          ["@testing-library/jest-dom", "npm:6.9.1"],\
           ["aria-query", "npm:5.3.2"],\
           ["css.escape", "npm:1.5.1"],\
           ["dom-accessibility-api", "npm:0.6.3"],\
@@ -914,7 +887,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@types/chai", [\
       ["npm:5.2.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@types-chai-npm-5.2.3-5f61dbddda-10c0.zip/node_modules/@types/chai/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-chai-npm-5.2.3-5f61dbddda-10c0.zip/node_modules/@types/chai/",\
         "packageDependencies": [\
           ["@types/chai", "npm:5.2.3"],\
           ["@types/deep-eql", "npm:4.0.2"],\
@@ -925,25 +898,16 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@types/deep-eql", [\
       ["npm:4.0.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@types-deep-eql-npm-4.0.2-e6bc68cc92-10c0.zip/node_modules/@types/deep-eql/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-deep-eql-npm-4.0.2-e6bc68cc92-10c0.zip/node_modules/@types/deep-eql/",\
         "packageDependencies": [\
           ["@types/deep-eql", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@types/estree", [\
-      ["npm:1.0.8", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@types-estree-npm-1.0.8-2195bac6d6-10c0.zip/node_modules/@types/estree/",\
-        "packageDependencies": [\
-          ["@types/estree", "npm:1.0.8"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@types/node", [\
       ["npm:25.2.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@types-node-npm-25.2.3-c8fc40955b-10c0.zip/node_modules/@types/node/",\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-node-npm-25.2.3-c8fc40955b-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:25.2.3"],\
           ["undici-types", "npm:7.16.0"]\
@@ -955,118 +919,458 @@ const RAW_RUNTIME_STATE =
       ["workspace:@vitest/example-test", {\
         "packageLocation": "./@vitest/example-test/",\
         "packageDependencies": [\
-          ["@vitest/example-test", "workspace:@vitest/example-test"],\
           ["@testing-library/jest-dom", "npm:6.9.1"],\
           ["@types/node", "npm:25.2.3"],\
+          ["@vitest/example-test", "workspace:@vitest/example-test"],\
           ["sass-embedded", "npm:1.97.3"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
-          ["vitest", "virtual:5edfa9ef18ce67313756e4ea7eec097e72c3bf74cb0406cdfe526936af94a3d945e92e3b75c836fd6c49aaa102b9fe810a461e9c1fb2e3eef03936b9f84a3d72#npm:3.2.4"]\
+          ["vite-plus", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["vitest", [\
+            "@voidzero-dev/vite-plus-test",\
+            "virtual:5edfa9ef18ce67313756e4ea7eec097e72c3bf74cb0406cdfe526936af94a3d945e92e3b75c836fd6c49aaa102b9fe810a461e9c1fb2e3eef03936b9f84a3d72#npm:0.0.0-g52709db6.20260226-1136"\
+          ]]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
-    ["@vitest/expect", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-expect-npm-3.2.4-97c526d5cc-10c0.zip/node_modules/@vitest/expect/",\
+    ["@voidzero-dev/vite-plus-core", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@voidzero-dev-vite-plus-core-npm-0.0.0-g52709db6.20260226-1136-fcb33e33ce-10c0.zip/node_modules/@voidzero-dev/vite-plus-core/",\
         "packageDependencies": [\
-          ["@vitest/expect", "npm:3.2.4"],\
-          ["@types/chai", "npm:5.2.3"],\
-          ["@vitest/spy", "npm:3.2.4"],\
-          ["@vitest/utils", "npm:3.2.4"],\
-          ["chai", "npm:5.3.3"],\
-          ["tinyrainbow", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@vitest/mocker", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-mocker-npm-3.2.4-48badb1f19-10c0.zip/node_modules/@vitest/mocker/",\
-        "packageDependencies": [\
-          ["@vitest/mocker", "npm:3.2.4"]\
+          ["@voidzero-dev/vite-plus-core", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:3.2.4", {\
-        "packageLocation": "./.yarn/__virtual__/@vitest-mocker-virtual-cdcf6b32e1/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-mocker-npm-3.2.4-48badb1f19-10c0.zip/node_modules/@vitest/mocker/",\
+      ["virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/__virtual__/@voidzero-dev-vite-plus-core-virtual-121f8b318a/5/.yarn/berry/cache/@voidzero-dev-vite-plus-core-npm-0.0.0-g52709db6.20260226-1136-fcb33e33ce-10c0.zip/node_modules/@voidzero-dev/vite-plus-core/",\
         "packageDependencies": [\
-          ["@vitest/mocker", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:3.2.4"],\
-          ["@types/msw", null],\
-          ["@types/vite", null],\
-          ["@vitest/spy", "npm:3.2.4"],\
-          ["estree-walker", "npm:3.0.3"],\
-          ["magic-string", "npm:0.30.21"],\
-          ["msw", null],\
-          ["vite", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:7.3.1"]\
+          ["@arethetypeswrong/core", null],\
+          ["@oxc-project/runtime", "npm:0.114.0"],\
+          ["@oxc-project/types", "npm:0.114.0"],\
+          ["@types/arethetypeswrong__core", null],\
+          ["@types/esbuild", null],\
+          ["@types/jiti", null],\
+          ["@types/less", null],\
+          ["@types/node", "npm:25.2.3"],\
+          ["@types/publint", null],\
+          ["@types/sass", null],\
+          ["@types/sass-embedded", null],\
+          ["@types/stylus", null],\
+          ["@types/sugarss", null],\
+          ["@types/terser", null],\
+          ["@types/tsx", null],\
+          ["@types/typescript", null],\
+          ["@types/unplugin-lightningcss", null],\
+          ["@types/unplugin-unused", null],\
+          ["@types/vitejs__devtools", null],\
+          ["@types/yaml", null],\
+          ["@vitejs/devtools", null],\
+          ["@voidzero-dev/vite-plus-core", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["esbuild", null],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
+          ["jiti", null],\
+          ["less", null],\
+          ["lightningcss", "npm:1.31.1"],\
+          ["postcss", "npm:8.5.6"],\
+          ["publint", null],\
+          ["sass", null],\
+          ["sass-embedded", "npm:1.97.3"],\
+          ["stylus", null],\
+          ["sugarss", null],\
+          ["terser", null],\
+          ["tsx", null],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
+          ["unplugin-lightningcss", null],\
+          ["unplugin-unused", null],\
+          ["yaml", null]\
         ],\
         "packagePeers": [\
-          "@types/msw",\
-          "@types/vite",\
-          "msw",\
-          "vite"\
+          "@arethetypeswrong/core",\
+          "@types/arethetypeswrong__core",\
+          "@types/esbuild",\
+          "@types/jiti",\
+          "@types/less",\
+          "@types/node",\
+          "@types/publint",\
+          "@types/sass-embedded",\
+          "@types/sass",\
+          "@types/stylus",\
+          "@types/sugarss",\
+          "@types/terser",\
+          "@types/tsx",\
+          "@types/typescript",\
+          "@types/unplugin-lightningcss",\
+          "@types/unplugin-unused",\
+          "@types/vitejs__devtools",\
+          "@types/yaml",\
+          "@vitejs/devtools",\
+          "esbuild",\
+          "jiti",\
+          "less",\
+          "publint",\
+          "sass-embedded",\
+          "sass",\
+          "stylus",\
+          "sugarss",\
+          "terser",\
+          "tsx",\
+          "typescript",\
+          "unplugin-lightningcss",\
+          "unplugin-unused",\
+          "yaml"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/__virtual__/@voidzero-dev-vite-plus-core-virtual-5ea9ade89c/5/.yarn/berry/cache/@voidzero-dev-vite-plus-core-npm-0.0.0-g52709db6.20260226-1136-fcb33e33ce-10c0.zip/node_modules/@voidzero-dev/vite-plus-core/",\
+        "packageDependencies": [\
+          ["@arethetypeswrong/core", null],\
+          ["@oxc-project/runtime", "npm:0.114.0"],\
+          ["@oxc-project/types", "npm:0.114.0"],\
+          ["@types/arethetypeswrong__core", null],\
+          ["@types/esbuild", null],\
+          ["@types/jiti", null],\
+          ["@types/less", null],\
+          ["@types/node", null],\
+          ["@types/publint", null],\
+          ["@types/sass", null],\
+          ["@types/sass-embedded", null],\
+          ["@types/stylus", null],\
+          ["@types/sugarss", null],\
+          ["@types/terser", null],\
+          ["@types/tsx", null],\
+          ["@types/typescript", null],\
+          ["@types/unplugin-lightningcss", null],\
+          ["@types/unplugin-unused", null],\
+          ["@types/vitejs__devtools", null],\
+          ["@types/yaml", null],\
+          ["@vitejs/devtools", null],\
+          ["@voidzero-dev/vite-plus-core", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["esbuild", null],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
+          ["jiti", null],\
+          ["less", null],\
+          ["lightningcss", "npm:1.31.1"],\
+          ["postcss", "npm:8.5.6"],\
+          ["publint", null],\
+          ["sass", null],\
+          ["sass-embedded", null],\
+          ["stylus", null],\
+          ["sugarss", null],\
+          ["terser", null],\
+          ["tsx", null],\
+          ["typescript", null],\
+          ["unplugin-lightningcss", null],\
+          ["unplugin-unused", null],\
+          ["yaml", null]\
+        ],\
+        "packagePeers": [\
+          "@arethetypeswrong/core",\
+          "@types/arethetypeswrong__core",\
+          "@types/esbuild",\
+          "@types/jiti",\
+          "@types/less",\
+          "@types/node",\
+          "@types/publint",\
+          "@types/sass-embedded",\
+          "@types/sass",\
+          "@types/stylus",\
+          "@types/sugarss",\
+          "@types/terser",\
+          "@types/tsx",\
+          "@types/typescript",\
+          "@types/unplugin-lightningcss",\
+          "@types/unplugin-unused",\
+          "@types/vitejs__devtools",\
+          "@types/yaml",\
+          "@vitejs/devtools",\
+          "esbuild",\
+          "jiti",\
+          "less",\
+          "publint",\
+          "sass-embedded",\
+          "sass",\
+          "stylus",\
+          "sugarss",\
+          "terser",\
+          "tsx",\
+          "typescript",\
+          "unplugin-lightningcss",\
+          "unplugin-unused",\
+          "yaml"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:fcfc41203648b7e4f7b887835a3fb1bf2df4f0bc5bc6882ad4cc635848d6501302942a24987cd7187cd9bc443dc85e734946dc7532631b33f2fdfc32c3c776a2#npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/__virtual__/@voidzero-dev-vite-plus-core-virtual-cb11dca398/5/.yarn/berry/cache/@voidzero-dev-vite-plus-core-npm-0.0.0-g52709db6.20260226-1136-fcb33e33ce-10c0.zip/node_modules/@voidzero-dev/vite-plus-core/",\
+        "packageDependencies": [\
+          ["@arethetypeswrong/core", null],\
+          ["@oxc-project/runtime", "npm:0.114.0"],\
+          ["@oxc-project/types", "npm:0.114.0"],\
+          ["@types/arethetypeswrong__core", null],\
+          ["@types/esbuild", null],\
+          ["@types/jiti", null],\
+          ["@types/less", null],\
+          ["@types/node", "npm:25.2.3"],\
+          ["@types/publint", null],\
+          ["@types/sass", null],\
+          ["@types/sass-embedded", null],\
+          ["@types/stylus", null],\
+          ["@types/sugarss", null],\
+          ["@types/terser", null],\
+          ["@types/tsx", null],\
+          ["@types/typescript", null],\
+          ["@types/unplugin-lightningcss", null],\
+          ["@types/unplugin-unused", null],\
+          ["@types/vitejs__devtools", null],\
+          ["@types/yaml", null],\
+          ["@vitejs/devtools", null],\
+          ["@voidzero-dev/vite-plus-core", "virtual:fcfc41203648b7e4f7b887835a3fb1bf2df4f0bc5bc6882ad4cc635848d6501302942a24987cd7187cd9bc443dc85e734946dc7532631b33f2fdfc32c3c776a2#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["esbuild", null],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
+          ["jiti", null],\
+          ["less", null],\
+          ["lightningcss", "npm:1.31.1"],\
+          ["postcss", "npm:8.5.6"],\
+          ["publint", null],\
+          ["sass", null],\
+          ["sass-embedded", null],\
+          ["stylus", null],\
+          ["sugarss", null],\
+          ["terser", null],\
+          ["tsx", null],\
+          ["typescript", null],\
+          ["unplugin-lightningcss", null],\
+          ["unplugin-unused", null],\
+          ["yaml", null]\
+        ],\
+        "packagePeers": [\
+          "@arethetypeswrong/core",\
+          "@types/arethetypeswrong__core",\
+          "@types/esbuild",\
+          "@types/jiti",\
+          "@types/less",\
+          "@types/node",\
+          "@types/publint",\
+          "@types/sass-embedded",\
+          "@types/sass",\
+          "@types/stylus",\
+          "@types/sugarss",\
+          "@types/terser",\
+          "@types/tsx",\
+          "@types/typescript",\
+          "@types/unplugin-lightningcss",\
+          "@types/unplugin-unused",\
+          "@types/vitejs__devtools",\
+          "@types/yaml",\
+          "@vitejs/devtools",\
+          "esbuild",\
+          "jiti",\
+          "less",\
+          "publint",\
+          "sass-embedded",\
+          "sass",\
+          "stylus",\
+          "sugarss",\
+          "terser",\
+          "tsx",\
+          "typescript",\
+          "unplugin-lightningcss",\
+          "unplugin-unused",\
+          "yaml"\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@vitest/pretty-format", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-pretty-format-npm-3.2.4-d7da0d3faf-10c0.zip/node_modules/@vitest/pretty-format/",\
+    ["@voidzero-dev/vite-plus-darwin-arm64", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/unplugged/@voidzero-dev-vite-plus-darwin-arm64-npm-0.0.0-g52709db6.20260226-1136-380649d4b9/node_modules/@voidzero-dev/vite-plus-darwin-arm64/",\
         "packageDependencies": [\
-          ["@vitest/pretty-format", "npm:3.2.4"],\
-          ["tinyrainbow", "npm:2.0.0"]\
+          ["@voidzero-dev/vite-plus-darwin-arm64", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@vitest/runner", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-runner-npm-3.2.4-b2e96befcb-10c0.zip/node_modules/@vitest/runner/",\
+    ["@voidzero-dev/vite-plus-darwin-x64", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/unplugged/@voidzero-dev-vite-plus-darwin-x64-npm-0.0.0-g52709db6.20260226-1136-05c9c6e7ab/node_modules/@voidzero-dev/vite-plus-darwin-x64/",\
         "packageDependencies": [\
-          ["@vitest/runner", "npm:3.2.4"],\
-          ["@vitest/utils", "npm:3.2.4"],\
-          ["pathe", "npm:2.0.3"],\
-          ["strip-literal", "npm:3.1.0"]\
+          ["@voidzero-dev/vite-plus-darwin-x64", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@vitest/snapshot", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-snapshot-npm-3.2.4-c43292ea8b-10c0.zip/node_modules/@vitest/snapshot/",\
+    ["@voidzero-dev/vite-plus-linux-arm64-gnu", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/unplugged/@voidzero-dev-vite-plus-linux-arm64-gnu-npm-0.0.0-g52709db6.20260226-1136-920e660f36/node_modules/@voidzero-dev/vite-plus-linux-arm64-gnu/",\
         "packageDependencies": [\
-          ["@vitest/snapshot", "npm:3.2.4"],\
-          ["@vitest/pretty-format", "npm:3.2.4"],\
-          ["magic-string", "npm:0.30.21"],\
-          ["pathe", "npm:2.0.3"]\
+          ["@voidzero-dev/vite-plus-linux-arm64-gnu", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@vitest/spy", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-spy-npm-3.2.4-ed1c68e965-10c0.zip/node_modules/@vitest/spy/",\
+    ["@voidzero-dev/vite-plus-linux-x64-gnu", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/unplugged/@voidzero-dev-vite-plus-linux-x64-gnu-npm-0.0.0-g52709db6.20260226-1136-099a4c81a3/node_modules/@voidzero-dev/vite-plus-linux-x64-gnu/",\
         "packageDependencies": [\
-          ["@vitest/spy", "npm:3.2.4"],\
-          ["tinyspy", "npm:4.0.4"]\
+          ["@voidzero-dev/vite-plus-linux-x64-gnu", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@vitest/utils", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/@vitest-utils-npm-3.2.4-2d32b4da53-10c0.zip/node_modules/@vitest/utils/",\
+    ["@voidzero-dev/vite-plus-test", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@voidzero-dev-vite-plus-test-npm-0.0.0-g52709db6.20260226-1136-6022dc79f4-10c0.zip/node_modules/@voidzero-dev/vite-plus-test/",\
         "packageDependencies": [\
-          ["@vitest/utils", "npm:3.2.4"],\
-          ["@vitest/pretty-format", "npm:3.2.4"],\
-          ["loupe", "npm:3.2.1"],\
-          ["tinyrainbow", "npm:2.0.0"]\
+          ["@voidzero-dev/vite-plus-test", "npm:0.0.0-g52709db6.20260226-1136"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/__virtual__/@voidzero-dev-vite-plus-test-virtual-fcfc412036/5/.yarn/berry/cache/@voidzero-dev-vite-plus-test-npm-0.0.0-g52709db6.20260226-1136-6022dc79f4-10c0.zip/node_modules/@voidzero-dev/vite-plus-test/",\
+        "packageDependencies": [\
+          ["@edge-runtime/vm", null],\
+          ["@opentelemetry/api", null],\
+          ["@standard-schema/spec", "npm:1.1.0"],\
+          ["@types/chai", "npm:5.2.3"],\
+          ["@types/edge-runtime__vm", null],\
+          ["@types/happy-dom", null],\
+          ["@types/jsdom", null],\
+          ["@types/node", "npm:25.2.3"],\
+          ["@types/opentelemetry__api", null],\
+          ["@types/vitest__ui", null],\
+          ["@vitest/ui", null],\
+          ["@voidzero-dev/vite-plus-core", "virtual:fcfc41203648b7e4f7b887835a3fb1bf2df4f0bc5bc6882ad4cc635848d6501302942a24987cd7187cd9bc443dc85e734946dc7532631b33f2fdfc32c3c776a2#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-test", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["es-module-lexer", "npm:1.7.0"],\
+          ["happy-dom", null],\
+          ["jsdom", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0"],\
+          ["obug", "npm:2.1.1"],\
+          ["pixelmatch", "npm:7.1.0"],\
+          ["pngjs", "npm:7.0.0"],\
+          ["sirv", "npm:3.0.2"],\
+          ["std-env", "npm:3.10.0"],\
+          ["tinybench", "npm:2.9.0"],\
+          ["tinyexec", "npm:1.0.2"],\
+          ["tinyglobby", "npm:0.2.15"],\
+          ["ws", "virtual:1dc4996762043fe5cfaf43547349d52f5ed411c038f4cfd2eb3044d3ddf858512dbad2a4f1825211fdfd97cb2efaa7c21b0725c908a918739e30a3dbfa369fb1#npm:8.19.0"]\
+        ],\
+        "packagePeers": [\
+          "@edge-runtime/vm",\
+          "@opentelemetry/api",\
+          "@types/edge-runtime__vm",\
+          "@types/happy-dom",\
+          "@types/jsdom",\
+          "@types/node",\
+          "@types/opentelemetry__api",\
+          "@types/vitest__ui",\
+          "@vitest/ui",\
+          "happy-dom",\
+          "jsdom"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:5edfa9ef18ce67313756e4ea7eec097e72c3bf74cb0406cdfe526936af94a3d945e92e3b75c836fd6c49aaa102b9fe810a461e9c1fb2e3eef03936b9f84a3d72#npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/__virtual__/@voidzero-dev-vite-plus-test-virtual-04d529258e/5/.yarn/berry/cache/@voidzero-dev-vite-plus-test-npm-0.0.0-g52709db6.20260226-1136-6022dc79f4-10c0.zip/node_modules/@voidzero-dev/vite-plus-test/",\
+        "packageDependencies": [\
+          ["@edge-runtime/vm", null],\
+          ["@opentelemetry/api", null],\
+          ["@standard-schema/spec", "npm:1.1.0"],\
+          ["@types/chai", "npm:5.2.3"],\
+          ["@types/edge-runtime__vm", null],\
+          ["@types/happy-dom", null],\
+          ["@types/jsdom", null],\
+          ["@types/node", "npm:25.2.3"],\
+          ["@types/opentelemetry__api", null],\
+          ["@types/vitest__ui", null],\
+          ["@vitest/ui", null],\
+          ["@voidzero-dev/vite-plus-core", "virtual:fcfc41203648b7e4f7b887835a3fb1bf2df4f0bc5bc6882ad4cc635848d6501302942a24987cd7187cd9bc443dc85e734946dc7532631b33f2fdfc32c3c776a2#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-test", "virtual:5edfa9ef18ce67313756e4ea7eec097e72c3bf74cb0406cdfe526936af94a3d945e92e3b75c836fd6c49aaa102b9fe810a461e9c1fb2e3eef03936b9f84a3d72#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["es-module-lexer", "npm:1.7.0"],\
+          ["happy-dom", null],\
+          ["jsdom", null],\
+          ["obug", "npm:2.1.1"],\
+          ["pixelmatch", "npm:7.1.0"],\
+          ["pngjs", "npm:7.0.0"],\
+          ["sirv", "npm:3.0.2"],\
+          ["std-env", "npm:3.10.0"],\
+          ["tinybench", "npm:2.9.0"],\
+          ["tinyexec", "npm:1.0.2"],\
+          ["tinyglobby", "npm:0.2.15"],\
+          ["ws", "virtual:1dc4996762043fe5cfaf43547349d52f5ed411c038f4cfd2eb3044d3ddf858512dbad2a4f1825211fdfd97cb2efaa7c21b0725c908a918739e30a3dbfa369fb1#npm:8.19.0"]\
+        ],\
+        "packagePeers": [\
+          "@edge-runtime/vm",\
+          "@opentelemetry/api",\
+          "@types/edge-runtime__vm",\
+          "@types/happy-dom",\
+          "@types/jsdom",\
+          "@types/node",\
+          "@types/opentelemetry__api",\
+          "@types/vitest__ui",\
+          "@vitest/ui",\
+          "happy-dom",\
+          "jsdom"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/__virtual__/@voidzero-dev-vite-plus-test-virtual-1dc4996762/5/.yarn/berry/cache/@voidzero-dev-vite-plus-test-npm-0.0.0-g52709db6.20260226-1136-6022dc79f4-10c0.zip/node_modules/@voidzero-dev/vite-plus-test/",\
+        "packageDependencies": [\
+          ["@edge-runtime/vm", null],\
+          ["@opentelemetry/api", null],\
+          ["@standard-schema/spec", "npm:1.1.0"],\
+          ["@types/chai", "npm:5.2.3"],\
+          ["@types/edge-runtime__vm", null],\
+          ["@types/happy-dom", null],\
+          ["@types/jsdom", null],\
+          ["@types/node", null],\
+          ["@types/opentelemetry__api", null],\
+          ["@types/vitest__ui", null],\
+          ["@vitest/ui", null],\
+          ["@voidzero-dev/vite-plus-core", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-test", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["es-module-lexer", "npm:1.7.0"],\
+          ["happy-dom", null],\
+          ["jsdom", null],\
+          ["obug", "npm:2.1.1"],\
+          ["pixelmatch", "npm:7.1.0"],\
+          ["pngjs", "npm:7.0.0"],\
+          ["sirv", "npm:3.0.2"],\
+          ["std-env", "npm:3.10.0"],\
+          ["tinybench", "npm:2.9.0"],\
+          ["tinyexec", "npm:1.0.2"],\
+          ["tinyglobby", "npm:0.2.15"],\
+          ["ws", "virtual:1dc4996762043fe5cfaf43547349d52f5ed411c038f4cfd2eb3044d3ddf858512dbad2a4f1825211fdfd97cb2efaa7c21b0725c908a918739e30a3dbfa369fb1#npm:8.19.0"]\
+        ],\
+        "packagePeers": [\
+          "@edge-runtime/vm",\
+          "@opentelemetry/api",\
+          "@types/edge-runtime__vm",\
+          "@types/happy-dom",\
+          "@types/jsdom",\
+          "@types/node",\
+          "@types/opentelemetry__api",\
+          "@types/vitest__ui",\
+          "@vitest/ui",\
+          "happy-dom",\
+          "jsdom"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@voidzero-dev/vite-plus-win32-x64-msvc", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "./.yarn/unplugged/@voidzero-dev-vite-plus-win32-x64-msvc-npm-0.0.0-g52709db6.20260226-1136-84c6469edb/node_modules/@voidzero-dev/vite-plus-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@voidzero-dev/vite-plus-win32-x64-msvc", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["abbrev", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/abbrev-npm-4.0.0-7d848a1ef0-10c0.zip/node_modules/abbrev/",\
+        "packageLocation": "../../../../.yarn/berry/cache/abbrev-npm-4.0.0-7d848a1ef0-10c0.zip/node_modules/abbrev/",\
         "packageDependencies": [\
           ["abbrev", "npm:4.0.0"]\
         ],\
@@ -1075,7 +1379,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["agent-base", [\
       ["npm:7.1.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/agent-base-npm-7.1.4-cb8b4604d5-10c0.zip/node_modules/agent-base/",\
+        "packageLocation": "../../../../.yarn/berry/cache/agent-base-npm-7.1.4-cb8b4604d5-10c0.zip/node_modules/agent-base/",\
         "packageDependencies": [\
           ["agent-base", "npm:7.1.4"]\
         ],\
@@ -1084,7 +1388,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["aria-query", [\
       ["npm:5.3.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/aria-query-npm-5.3.2-78632ac5c5-10c0.zip/node_modules/aria-query/",\
+        "packageLocation": "../../../../.yarn/berry/cache/aria-query-npm-5.3.2-78632ac5c5-10c0.zip/node_modules/aria-query/",\
         "packageDependencies": [\
           ["aria-query", "npm:5.3.2"]\
         ],\
@@ -1093,7 +1397,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["assertion-error", [\
       ["npm:2.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/assertion-error-npm-2.0.1-8169d136f2-10c0.zip/node_modules/assertion-error/",\
+        "packageLocation": "../../../../.yarn/berry/cache/assertion-error-npm-2.0.1-8169d136f2-10c0.zip/node_modules/assertion-error/",\
         "packageDependencies": [\
           ["assertion-error", "npm:2.0.1"]\
         ],\
@@ -1102,7 +1406,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["bidi-js", [\
       ["npm:1.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/bidi-js-npm-1.0.3-0035393a88-10c0.zip/node_modules/bidi-js/",\
+        "packageLocation": "../../../../.yarn/berry/cache/bidi-js-npm-1.0.3-0035393a88-10c0.zip/node_modules/bidi-js/",\
         "packageDependencies": [\
           ["bidi-js", "npm:1.0.3"],\
           ["require-from-string", "npm:2.0.2"]\
@@ -1112,7 +1416,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["cac", [\
       ["npm:6.7.14", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/cac-npm-6.7.14-c46284e425-10c0.zip/node_modules/cac/",\
+        "packageLocation": "../../../../.yarn/berry/cache/cac-npm-6.7.14-c46284e425-10c0.zip/node_modules/cac/",\
         "packageDependencies": [\
           ["cac", "npm:6.7.14"]\
         ],\
@@ -1121,10 +1425,10 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["cacache", [\
       ["npm:20.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/cacache-npm-20.0.3-5f244d5bdd-10c0.zip/node_modules/cacache/",\
+        "packageLocation": "../../../../.yarn/berry/cache/cacache-npm-20.0.3-5f244d5bdd-10c0.zip/node_modules/cacache/",\
         "packageDependencies": [\
-          ["cacache", "npm:20.0.3"],\
           ["@npmcli/fs", "npm:5.0.0"],\
+          ["cacache", "npm:20.0.3"],\
           ["fs-minipass", "npm:3.0.3"],\
           ["glob", "npm:13.0.1"],\
           ["lru-cache", "npm:11.2.5"],\
@@ -1139,32 +1443,9 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["chai", [\
-      ["npm:5.3.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/chai-npm-5.3.3-ebef71cdac-10c0.zip/node_modules/chai/",\
-        "packageDependencies": [\
-          ["chai", "npm:5.3.3"],\
-          ["assertion-error", "npm:2.0.1"],\
-          ["check-error", "npm:2.1.3"],\
-          ["deep-eql", "npm:5.0.2"],\
-          ["loupe", "npm:3.2.1"],\
-          ["pathval", "npm:2.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["check-error", [\
-      ["npm:2.1.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/check-error-npm-2.1.3-e17bcf3ed8-10c0.zip/node_modules/check-error/",\
-        "packageDependencies": [\
-          ["check-error", "npm:2.1.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["chokidar", [\
       ["npm:4.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/chokidar-npm-4.0.3-962354fbb4-10c0.zip/node_modules/chokidar/",\
+        "packageLocation": "../../../../.yarn/berry/cache/chokidar-npm-4.0.3-962354fbb4-10c0.zip/node_modules/chokidar/",\
         "packageDependencies": [\
           ["chokidar", "npm:4.0.3"],\
           ["readdirp", "npm:4.1.2"]\
@@ -1174,7 +1455,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["chownr", [\
       ["npm:3.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/chownr-npm-3.0.0-5275e85d25-10c0.zip/node_modules/chownr/",\
+        "packageLocation": "../../../../.yarn/berry/cache/chownr-npm-3.0.0-5275e85d25-10c0.zip/node_modules/chownr/",\
         "packageDependencies": [\
           ["chownr", "npm:3.0.0"]\
         ],\
@@ -1183,16 +1464,28 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["colorjs.io", [\
       ["npm:0.5.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/colorjs.io-npm-0.5.2-4966f6c0a3-10c0.zip/node_modules/colorjs.io/",\
+        "packageLocation": "../../../../.yarn/berry/cache/colorjs.io-npm-0.5.2-4966f6c0a3-10c0.zip/node_modules/colorjs.io/",\
         "packageDependencies": [\
           ["colorjs.io", "npm:0.5.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
+    ["cross-spawn", [\
+      ["npm:7.0.6", {\
+        "packageLocation": "../../../../.yarn/berry/cache/cross-spawn-npm-7.0.6-264bddf921-10c0.zip/node_modules/cross-spawn/",\
+        "packageDependencies": [\
+          ["cross-spawn", "npm:7.0.6"],\
+          ["path-key", "npm:3.1.1"],\
+          ["shebang-command", "npm:2.0.0"],\
+          ["which", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["css-tree", [\
       ["npm:3.1.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/css-tree-npm-3.1.0-19cd308584-10c0.zip/node_modules/css-tree/",\
+        "packageLocation": "../../../../.yarn/berry/cache/css-tree-npm-3.1.0-19cd308584-10c0.zip/node_modules/css-tree/",\
         "packageDependencies": [\
           ["css-tree", "npm:3.1.0"],\
           ["mdn-data", "npm:2.12.2"],\
@@ -1203,7 +1496,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["css.escape", [\
       ["npm:1.5.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/css.escape-npm-1.5.1-b24d2ba77a-10c0.zip/node_modules/css.escape/",\
+        "packageLocation": "../../../../.yarn/berry/cache/css.escape-npm-1.5.1-b24d2ba77a-10c0.zip/node_modules/css.escape/",\
         "packageDependencies": [\
           ["css.escape", "npm:1.5.1"]\
         ],\
@@ -1212,12 +1505,12 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["cssstyle", [\
       ["npm:5.3.7", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/cssstyle-npm-5.3.7-ffdbe1b5e7-10c0.zip/node_modules/cssstyle/",\
+        "packageLocation": "../../../../.yarn/berry/cache/cssstyle-npm-5.3.7-ffdbe1b5e7-10c0.zip/node_modules/cssstyle/",\
         "packageDependencies": [\
-          ["cssstyle", "npm:5.3.7"],\
           ["@asamuzakjp/css-color", "npm:4.1.2"],\
           ["@csstools/css-syntax-patches-for-csstree", "npm:1.0.26"],\
           ["css-tree", "npm:3.1.0"],\
+          ["cssstyle", "npm:5.3.7"],\
           ["lru-cache", "npm:11.2.5"]\
         ],\
         "linkType": "HARD"\
@@ -1225,7 +1518,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["data-urls", [\
       ["npm:7.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/data-urls-npm-7.0.0-0be7d77a95-10c0.zip/node_modules/data-urls/",\
+        "packageLocation": "../../../../.yarn/berry/cache/data-urls-npm-7.0.0-0be7d77a95-10c0.zip/node_modules/data-urls/",\
         "packageDependencies": [\
           ["data-urls", "npm:7.0.0"],\
           ["whatwg-mimetype", "npm:5.0.0"],\
@@ -1236,17 +1529,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["debug", [\
       ["npm:4.4.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/debug-npm-4.4.3-0105c6123a-10c0.zip/node_modules/debug/",\
+        "packageLocation": "../../../../.yarn/berry/cache/debug-npm-4.4.3-0105c6123a-10c0.zip/node_modules/debug/",\
         "packageDependencies": [\
           ["debug", "npm:4.4.3"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3", {\
-        "packageLocation": "./.yarn/__virtual__/debug-virtual-5da9fc757d/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/debug-npm-4.4.3-0105c6123a-10c0.zip/node_modules/debug/",\
+        "packageLocation": "./.yarn/__virtual__/debug-virtual-5da9fc757d/5/.yarn/berry/cache/debug-npm-4.4.3-0105c6123a-10c0.zip/node_modules/debug/",\
         "packageDependencies": [\
-          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
           ["@types/supports-color", null],\
+          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
           ["ms", "npm:2.1.3"],\
           ["supports-color", null]\
         ],\
@@ -1259,25 +1552,16 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["decimal.js", [\
       ["npm:10.6.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/decimal.js-npm-10.6.0-a72c1b8a2f-10c0.zip/node_modules/decimal.js/",\
+        "packageLocation": "../../../../.yarn/berry/cache/decimal.js-npm-10.6.0-a72c1b8a2f-10c0.zip/node_modules/decimal.js/",\
         "packageDependencies": [\
           ["decimal.js", "npm:10.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["deep-eql", [\
-      ["npm:5.0.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/deep-eql-npm-5.0.2-3bce58289f-10c0.zip/node_modules/deep-eql/",\
-        "packageDependencies": [\
-          ["deep-eql", "npm:5.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["detect-libc", [\
       ["npm:2.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/detect-libc-npm-2.1.2-d0c382b1e2-10c0.zip/node_modules/detect-libc/",\
+        "packageLocation": "../../../../.yarn/berry/cache/detect-libc-npm-2.1.2-d0c382b1e2-10c0.zip/node_modules/detect-libc/",\
         "packageDependencies": [\
           ["detect-libc", "npm:2.1.2"]\
         ],\
@@ -1286,7 +1570,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["dom-accessibility-api", [\
       ["npm:0.6.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/dom-accessibility-api-npm-0.6.3-0345e4dede-10c0.zip/node_modules/dom-accessibility-api/",\
+        "packageLocation": "../../../../.yarn/berry/cache/dom-accessibility-api-npm-0.6.3-0345e4dede-10c0.zip/node_modules/dom-accessibility-api/",\
         "packageDependencies": [\
           ["dom-accessibility-api", "npm:0.6.3"]\
         ],\
@@ -1295,7 +1579,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["encoding", [\
       ["npm:0.1.13", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/encoding-npm-0.1.13-82a1837d30-10c0.zip/node_modules/encoding/",\
+        "packageLocation": "../../../../.yarn/berry/cache/encoding-npm-0.1.13-82a1837d30-10c0.zip/node_modules/encoding/",\
         "packageDependencies": [\
           ["encoding", "npm:0.1.13"],\
           ["iconv-lite", "npm:0.6.3"]\
@@ -1305,7 +1589,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["entities", [\
       ["npm:6.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/entities-npm-6.0.1-84692dab43-10c0.zip/node_modules/entities/",\
+        "packageLocation": "../../../../.yarn/berry/cache/entities-npm-6.0.1-84692dab43-10c0.zip/node_modules/entities/",\
         "packageDependencies": [\
           ["entities", "npm:6.0.1"]\
         ],\
@@ -1314,7 +1598,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["env-paths", [\
       ["npm:2.2.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/env-paths-npm-2.2.1-7c7577428c-10c0.zip/node_modules/env-paths/",\
+        "packageLocation": "../../../../.yarn/berry/cache/env-paths-npm-2.2.1-7c7577428c-10c0.zip/node_modules/env-paths/",\
         "packageDependencies": [\
           ["env-paths", "npm:2.2.1"]\
         ],\
@@ -1323,7 +1607,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["err-code", [\
       ["npm:2.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/err-code-npm-2.0.3-082e0ff9a7-10c0.zip/node_modules/err-code/",\
+        "packageLocation": "../../../../.yarn/berry/cache/err-code-npm-2.0.3-082e0ff9a7-10c0.zip/node_modules/err-code/",\
         "packageDependencies": [\
           ["err-code", "npm:2.0.3"]\
         ],\
@@ -1332,70 +1616,16 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["es-module-lexer", [\
       ["npm:1.7.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/es-module-lexer-npm-1.7.0-456b47a08a-10c0.zip/node_modules/es-module-lexer/",\
+        "packageLocation": "../../../../.yarn/berry/cache/es-module-lexer-npm-1.7.0-456b47a08a-10c0.zip/node_modules/es-module-lexer/",\
         "packageDependencies": [\
           ["es-module-lexer", "npm:1.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["esbuild", [\
-      ["npm:0.27.3", {\
-        "packageLocation": "./.yarn/unplugged/esbuild-npm-0.27.3-85b6c20323/node_modules/esbuild/",\
-        "packageDependencies": [\
-          ["esbuild", "npm:0.27.3"],\
-          ["@esbuild/aix-ppc64", "npm:0.27.3"],\
-          ["@esbuild/android-arm", "npm:0.27.3"],\
-          ["@esbuild/android-arm64", "npm:0.27.3"],\
-          ["@esbuild/android-x64", "npm:0.27.3"],\
-          ["@esbuild/darwin-arm64", "npm:0.27.3"],\
-          ["@esbuild/darwin-x64", "npm:0.27.3"],\
-          ["@esbuild/freebsd-arm64", "npm:0.27.3"],\
-          ["@esbuild/freebsd-x64", "npm:0.27.3"],\
-          ["@esbuild/linux-arm", "npm:0.27.3"],\
-          ["@esbuild/linux-arm64", "npm:0.27.3"],\
-          ["@esbuild/linux-ia32", "npm:0.27.3"],\
-          ["@esbuild/linux-loong64", "npm:0.27.3"],\
-          ["@esbuild/linux-mips64el", "npm:0.27.3"],\
-          ["@esbuild/linux-ppc64", "npm:0.27.3"],\
-          ["@esbuild/linux-riscv64", "npm:0.27.3"],\
-          ["@esbuild/linux-s390x", "npm:0.27.3"],\
-          ["@esbuild/linux-x64", "npm:0.27.3"],\
-          ["@esbuild/netbsd-arm64", "npm:0.27.3"],\
-          ["@esbuild/netbsd-x64", "npm:0.27.3"],\
-          ["@esbuild/openbsd-arm64", "npm:0.27.3"],\
-          ["@esbuild/openbsd-x64", "npm:0.27.3"],\
-          ["@esbuild/openharmony-arm64", "npm:0.27.3"],\
-          ["@esbuild/sunos-x64", "npm:0.27.3"],\
-          ["@esbuild/win32-arm64", "npm:0.27.3"],\
-          ["@esbuild/win32-ia32", "npm:0.27.3"],\
-          ["@esbuild/win32-x64", "npm:0.27.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["estree-walker", [\
-      ["npm:3.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/estree-walker-npm-3.0.3-0372979673-10c0.zip/node_modules/estree-walker/",\
-        "packageDependencies": [\
-          ["estree-walker", "npm:3.0.3"],\
-          ["@types/estree", "npm:1.0.8"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["expect-type", [\
-      ["npm:1.3.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/expect-type-npm-1.3.0-95a4384745-10c0.zip/node_modules/expect-type/",\
-        "packageDependencies": [\
-          ["expect-type", "npm:1.3.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["exponential-backoff", [\
       ["npm:3.1.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/exponential-backoff-npm-3.1.3-28be78d98e-10c0.zip/node_modules/exponential-backoff/",\
+        "packageLocation": "../../../../.yarn/berry/cache/exponential-backoff-npm-3.1.3-28be78d98e-10c0.zip/node_modules/exponential-backoff/",\
         "packageDependencies": [\
           ["exponential-backoff", "npm:3.1.3"]\
         ],\
@@ -1404,17 +1634,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["fdir", [\
       ["npm:6.5.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/fdir-npm-6.5.0-8814a0dec7-10c0.zip/node_modules/fdir/",\
+        "packageLocation": "../../../../.yarn/berry/cache/fdir-npm-6.5.0-8814a0dec7-10c0.zip/node_modules/fdir/",\
         "packageDependencies": [\
           ["fdir", "npm:6.5.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0", {\
-        "packageLocation": "./.yarn/__virtual__/fdir-virtual-abd4ab2082/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/fdir-npm-6.5.0-8814a0dec7-10c0.zip/node_modules/fdir/",\
+        "packageLocation": "./.yarn/__virtual__/fdir-virtual-abd4ab2082/5/.yarn/berry/cache/fdir-npm-6.5.0-8814a0dec7-10c0.zip/node_modules/fdir/",\
         "packageDependencies": [\
-          ["fdir", "virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0"],\
           ["@types/picomatch", null],\
+          ["fdir", "virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0"],\
           ["picomatch", "npm:4.0.3"]\
         ],\
         "packagePeers": [\
@@ -1426,7 +1656,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["fs-minipass", [\
       ["npm:3.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/fs-minipass-npm-3.0.3-d148d6ac19-10c0.zip/node_modules/fs-minipass/",\
+        "packageLocation": "../../../../.yarn/berry/cache/fs-minipass-npm-3.0.3-d148d6ac19-10c0.zip/node_modules/fs-minipass/",\
         "packageDependencies": [\
           ["fs-minipass", "npm:3.0.3"],\
           ["minipass", "npm:7.1.2"]\
@@ -1446,7 +1676,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["glob", [\
       ["npm:13.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/glob-npm-13.0.1-322004d656-10c0.zip/node_modules/glob/",\
+        "packageLocation": "../../../../.yarn/berry/cache/glob-npm-13.0.1-322004d656-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
           ["glob", "npm:13.0.1"],\
           ["minimatch", "npm:10.1.2"],\
@@ -1458,7 +1688,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["graceful-fs", [\
       ["npm:4.2.11", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/graceful-fs-npm-4.2.11-24bb648a68-10c0.zip/node_modules/graceful-fs/",\
+        "packageLocation": "../../../../.yarn/berry/cache/graceful-fs-npm-4.2.11-24bb648a68-10c0.zip/node_modules/graceful-fs/",\
         "packageDependencies": [\
           ["graceful-fs", "npm:4.2.11"]\
         ],\
@@ -1467,7 +1697,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["has-flag", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/has-flag-npm-4.0.0-32af9f0536-10c0.zip/node_modules/has-flag/",\
+        "packageLocation": "../../../../.yarn/berry/cache/has-flag-npm-4.0.0-32af9f0536-10c0.zip/node_modules/has-flag/",\
         "packageDependencies": [\
           ["has-flag", "npm:4.0.0"]\
         ],\
@@ -1476,17 +1706,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["html-encoding-sniffer", [\
       ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/html-encoding-sniffer-npm-6.0.0-1b55926d28-10c0.zip/node_modules/html-encoding-sniffer/",\
+        "packageLocation": "../../../../.yarn/berry/cache/html-encoding-sniffer-npm-6.0.0-1b55926d28-10c0.zip/node_modules/html-encoding-sniffer/",\
         "packageDependencies": [\
-          ["html-encoding-sniffer", "npm:6.0.0"],\
-          ["@exodus/bytes", "virtual:9e7c9550c969468956daaefc85c082f4c3c20c9703d0e98273e44416b6b9c2e9f4d05648b142b8118327316be05f39bcc685ee38ad8289578b5ce6b1073abf81#npm:1.11.0"]\
+          ["@exodus/bytes", "virtual:9e7c9550c969468956daaefc85c082f4c3c20c9703d0e98273e44416b6b9c2e9f4d05648b142b8118327316be05f39bcc685ee38ad8289578b5ce6b1073abf81#npm:1.11.0"],\
+          ["html-encoding-sniffer", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["http-cache-semantics", [\
       ["npm:4.2.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/http-cache-semantics-npm-4.2.0-fadacfb3ad-10c0.zip/node_modules/http-cache-semantics/",\
+        "packageLocation": "../../../../.yarn/berry/cache/http-cache-semantics-npm-4.2.0-fadacfb3ad-10c0.zip/node_modules/http-cache-semantics/",\
         "packageDependencies": [\
           ["http-cache-semantics", "npm:4.2.0"]\
         ],\
@@ -1495,29 +1725,29 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["http-proxy-agent", [\
       ["npm:7.0.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/http-proxy-agent-npm-7.0.2-643ed7cc33-10c0.zip/node_modules/http-proxy-agent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/http-proxy-agent-npm-7.0.2-643ed7cc33-10c0.zip/node_modules/http-proxy-agent/",\
         "packageDependencies": [\
-          ["http-proxy-agent", "npm:7.0.2"],\
           ["agent-base", "npm:7.1.4"],\
-          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"]\
+          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
+          ["http-proxy-agent", "npm:7.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["https-proxy-agent", [\
       ["npm:7.0.6", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/https-proxy-agent-npm-7.0.6-27a95c2690-10c0.zip/node_modules/https-proxy-agent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/https-proxy-agent-npm-7.0.6-27a95c2690-10c0.zip/node_modules/https-proxy-agent/",\
         "packageDependencies": [\
-          ["https-proxy-agent", "npm:7.0.6"],\
           ["agent-base", "npm:7.1.4"],\
-          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"]\
+          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
+          ["https-proxy-agent", "npm:7.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["iconv-lite", [\
       ["npm:0.6.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/iconv-lite-npm-0.6.3-24b8aae27e-10c0.zip/node_modules/iconv-lite/",\
+        "packageLocation": "../../../../.yarn/berry/cache/iconv-lite-npm-0.6.3-24b8aae27e-10c0.zip/node_modules/iconv-lite/",\
         "packageDependencies": [\
           ["iconv-lite", "npm:0.6.3"],\
           ["safer-buffer", "npm:2.1.2"]\
@@ -1527,7 +1757,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["immutable", [\
       ["npm:5.1.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/immutable-npm-5.1.4-cddca3d05c-10c0.zip/node_modules/immutable/",\
+        "packageLocation": "../../../../.yarn/berry/cache/immutable-npm-5.1.4-cddca3d05c-10c0.zip/node_modules/immutable/",\
         "packageDependencies": [\
           ["immutable", "npm:5.1.4"]\
         ],\
@@ -1536,7 +1766,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["imurmurhash", [\
       ["npm:0.1.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/imurmurhash-npm-0.1.4-610c5068a0-10c0.zip/node_modules/imurmurhash/",\
+        "packageLocation": "../../../../.yarn/berry/cache/imurmurhash-npm-0.1.4-610c5068a0-10c0.zip/node_modules/imurmurhash/",\
         "packageDependencies": [\
           ["imurmurhash", "npm:0.1.4"]\
         ],\
@@ -1545,7 +1775,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["indent-string", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/indent-string-npm-4.0.0-7b717435b2-10c0.zip/node_modules/indent-string/",\
+        "packageLocation": "../../../../.yarn/berry/cache/indent-string-npm-4.0.0-7b717435b2-10c0.zip/node_modules/indent-string/",\
         "packageDependencies": [\
           ["indent-string", "npm:4.0.0"]\
         ],\
@@ -1554,7 +1784,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["ip-address", [\
       ["npm:10.1.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/ip-address-npm-10.1.0-d5d5693401-10c0.zip/node_modules/ip-address/",\
+        "packageLocation": "../../../../.yarn/berry/cache/ip-address-npm-10.1.0-d5d5693401-10c0.zip/node_modules/ip-address/",\
         "packageDependencies": [\
           ["ip-address", "npm:10.1.0"]\
         ],\
@@ -1563,7 +1793,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["is-extglob", [\
       ["npm:2.1.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/is-extglob-npm-2.1.1-0870ea68b5-10c0.zip/node_modules/is-extglob/",\
+        "packageLocation": "../../../../.yarn/berry/cache/is-extglob-npm-2.1.1-0870ea68b5-10c0.zip/node_modules/is-extglob/",\
         "packageDependencies": [\
           ["is-extglob", "npm:2.1.1"]\
         ],\
@@ -1572,17 +1802,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["is-glob", [\
       ["npm:4.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/is-glob-npm-4.0.3-cb87bf1bdb-10c0.zip/node_modules/is-glob/",\
+        "packageLocation": "../../../../.yarn/berry/cache/is-glob-npm-4.0.3-cb87bf1bdb-10c0.zip/node_modules/is-glob/",\
         "packageDependencies": [\
-          ["is-glob", "npm:4.0.3"],\
-          ["is-extglob", "npm:2.1.1"]\
+          ["is-extglob", "npm:2.1.1"],\
+          ["is-glob", "npm:4.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["is-potential-custom-element-name", [\
       ["npm:1.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/is-potential-custom-element-name-npm-1.0.1-f352f606f8-10c0.zip/node_modules/is-potential-custom-element-name/",\
+        "packageLocation": "../../../../.yarn/berry/cache/is-potential-custom-element-name-npm-1.0.1-f352f606f8-10c0.zip/node_modules/is-potential-custom-element-name/",\
         "packageDependencies": [\
           ["is-potential-custom-element-name", "npm:1.0.1"]\
         ],\
@@ -1590,35 +1820,32 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["isexe", [\
+      ["npm:2.0.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/isexe-npm-2.0.0-b58870bd2e-10c0.zip/node_modules/isexe/",\
+        "packageDependencies": [\
+          ["isexe", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:3.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/isexe-npm-3.1.2-5b601d7277-10c0.zip/node_modules/isexe/",\
+        "packageLocation": "../../../../.yarn/berry/cache/isexe-npm-3.1.2-5b601d7277-10c0.zip/node_modules/isexe/",\
         "packageDependencies": [\
           ["isexe", "npm:3.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["js-tokens", [\
-      ["npm:9.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/js-tokens-npm-9.0.1-3ed793c0c1-10c0.zip/node_modules/js-tokens/",\
-        "packageDependencies": [\
-          ["js-tokens", "npm:9.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["jsdom", [\
       ["npm:28.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/jsdom-npm-28.0.0-0d90faf4ee-10c0.zip/node_modules/jsdom/",\
+        "packageLocation": "../../../../.yarn/berry/cache/jsdom-npm-28.0.0-0d90faf4ee-10c0.zip/node_modules/jsdom/",\
         "packageDependencies": [\
           ["jsdom", "npm:28.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/jsdom-virtual-28ee5ba386/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/jsdom-npm-28.0.0-0d90faf4ee-10c0.zip/node_modules/jsdom/",\
+        "packageLocation": "./.yarn/__virtual__/jsdom-virtual-28ee5ba386/5/.yarn/berry/cache/jsdom-npm-28.0.0-0d90faf4ee-10c0.zip/node_modules/jsdom/",\
         "packageDependencies": [\
-          ["jsdom", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0"],\
           ["@acemir/cssom", "npm:0.9.31"],\
           ["@asamuzakjp/dom-selector", "npm:6.7.8"],\
           ["@exodus/bytes", "virtual:9e7c9550c969468956daaefc85c082f4c3c20c9703d0e98273e44416b6b9c2e9f4d05648b142b8118327316be05f39bcc685ee38ad8289578b5ce6b1073abf81#npm:1.11.0"],\
@@ -1631,6 +1858,7 @@ const RAW_RUNTIME_STATE =
           ["http-proxy-agent", "npm:7.0.2"],\
           ["https-proxy-agent", "npm:7.0.6"],\
           ["is-potential-custom-element-name", "npm:1.0.1"],\
+          ["jsdom", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0"],\
           ["parse5", "npm:8.0.0"],\
           ["saxes", "npm:6.0.0"],\
           ["symbol-tree", "npm:3.2.4"],\
@@ -1649,42 +1877,143 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["loupe", [\
-      ["npm:3.2.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/loupe-npm-3.2.1-a8f491982f-10c0.zip/node_modules/loupe/",\
+    ["lightningcss", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/lightningcss-npm-1.31.1-c7ba6b60a1-10c0.zip/node_modules/lightningcss/",\
         "packageDependencies": [\
-          ["loupe", "npm:3.2.1"]\
+          ["detect-libc", "npm:2.1.2"],\
+          ["lightningcss", "npm:1.31.1"],\
+          ["lightningcss-android-arm64", "npm:1.31.1"],\
+          ["lightningcss-darwin-arm64", "npm:1.31.1"],\
+          ["lightningcss-darwin-x64", "npm:1.31.1"],\
+          ["lightningcss-freebsd-x64", "npm:1.31.1"],\
+          ["lightningcss-linux-arm-gnueabihf", "npm:1.31.1"],\
+          ["lightningcss-linux-arm64-gnu", "npm:1.31.1"],\
+          ["lightningcss-linux-arm64-musl", "npm:1.31.1"],\
+          ["lightningcss-linux-x64-gnu", "npm:1.31.1"],\
+          ["lightningcss-linux-x64-musl", "npm:1.31.1"],\
+          ["lightningcss-win32-arm64-msvc", "npm:1.31.1"],\
+          ["lightningcss-win32-x64-msvc", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-android-arm64", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-android-arm64-npm-1.31.1-c9177db6a5/node_modules/lightningcss-android-arm64/",\
+        "packageDependencies": [\
+          ["lightningcss-android-arm64", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-darwin-arm64", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-darwin-arm64-npm-1.31.1-91e93998a3/node_modules/lightningcss-darwin-arm64/",\
+        "packageDependencies": [\
+          ["lightningcss-darwin-arm64", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-darwin-x64", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-darwin-x64-npm-1.31.1-2fbb706484/node_modules/lightningcss-darwin-x64/",\
+        "packageDependencies": [\
+          ["lightningcss-darwin-x64", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-freebsd-x64", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-freebsd-x64-npm-1.31.1-b7a6df758d/node_modules/lightningcss-freebsd-x64/",\
+        "packageDependencies": [\
+          ["lightningcss-freebsd-x64", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-linux-arm-gnueabihf", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-linux-arm-gnueabihf-npm-1.31.1-acfdb356f1/node_modules/lightningcss-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["lightningcss-linux-arm-gnueabihf", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-linux-arm64-gnu", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-linux-arm64-gnu-npm-1.31.1-d2b2a51507/node_modules/lightningcss-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["lightningcss-linux-arm64-gnu", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-linux-arm64-musl", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-linux-arm64-musl-npm-1.31.1-56143e5c53/node_modules/lightningcss-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["lightningcss-linux-arm64-musl", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-linux-x64-gnu", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-linux-x64-gnu-npm-1.31.1-30ef619c3b/node_modules/lightningcss-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["lightningcss-linux-x64-gnu", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-linux-x64-musl", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-linux-x64-musl-npm-1.31.1-b488230d52/node_modules/lightningcss-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["lightningcss-linux-x64-musl", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-win32-arm64-msvc", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-win32-arm64-msvc-npm-1.31.1-80cf445113/node_modules/lightningcss-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["lightningcss-win32-arm64-msvc", "npm:1.31.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lightningcss-win32-x64-msvc", [\
+      ["npm:1.31.1", {\
+        "packageLocation": "./.yarn/unplugged/lightningcss-win32-x64-msvc-npm-1.31.1-a9ecf768ba/node_modules/lightningcss-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["lightningcss-win32-x64-msvc", "npm:1.31.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["lru-cache", [\
       ["npm:11.2.5", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/lru-cache-npm-11.2.5-a56eb40aef-10c0.zip/node_modules/lru-cache/",\
+        "packageLocation": "../../../../.yarn/berry/cache/lru-cache-npm-11.2.5-a56eb40aef-10c0.zip/node_modules/lru-cache/",\
         "packageDependencies": [\
           ["lru-cache", "npm:11.2.5"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["magic-string", [\
-      ["npm:0.30.21", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/magic-string-npm-0.30.21-9a226cb21e-10c0.zip/node_modules/magic-string/",\
-        "packageDependencies": [\
-          ["magic-string", "npm:0.30.21"],\
-          ["@jridgewell/sourcemap-codec", "npm:1.5.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["make-fetch-happen", [\
       ["npm:15.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/make-fetch-happen-npm-15.0.3-10a832fcad-10c0.zip/node_modules/make-fetch-happen/",\
+        "packageLocation": "../../../../.yarn/berry/cache/make-fetch-happen-npm-15.0.3-10a832fcad-10c0.zip/node_modules/make-fetch-happen/",\
         "packageDependencies": [\
-          ["make-fetch-happen", "npm:15.0.3"],\
           ["@npmcli/agent", "npm:4.0.0"],\
           ["cacache", "npm:20.0.3"],\
           ["http-cache-semantics", "npm:4.2.0"],\
+          ["make-fetch-happen", "npm:15.0.3"],\
           ["minipass", "npm:7.1.2"],\
           ["minipass-fetch", "npm:5.0.1"],\
           ["minipass-flush", "npm:1.0.5"],\
@@ -1699,7 +2028,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["mdn-data", [\
       ["npm:2.12.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/mdn-data-npm-2.12.2-d75edd5e16-10c0.zip/node_modules/mdn-data/",\
+        "packageLocation": "../../../../.yarn/berry/cache/mdn-data-npm-2.12.2-d75edd5e16-10c0.zip/node_modules/mdn-data/",\
         "packageDependencies": [\
           ["mdn-data", "npm:2.12.2"]\
         ],\
@@ -1708,7 +2037,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["min-indent", [\
       ["npm:1.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/min-indent-npm-1.0.1-77031f50e1-10c0.zip/node_modules/min-indent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/min-indent-npm-1.0.1-77031f50e1-10c0.zip/node_modules/min-indent/",\
         "packageDependencies": [\
           ["min-indent", "npm:1.0.1"]\
         ],\
@@ -1717,17 +2046,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["minimatch", [\
       ["npm:10.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minimatch-npm-10.1.2-9295d0648a-10c0.zip/node_modules/minimatch/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minimatch-npm-10.1.2-9295d0648a-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["minimatch", "npm:10.1.2"],\
-          ["@isaacs/brace-expansion", "npm:5.0.1"]\
+          ["@isaacs/brace-expansion", "npm:5.0.1"],\
+          ["minimatch", "npm:10.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["minipass", [\
       ["npm:3.3.6", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-npm-3.3.6-b8d93a945b-10c0.zip/node_modules/minipass/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-npm-3.3.6-b8d93a945b-10c0.zip/node_modules/minipass/",\
         "packageDependencies": [\
           ["minipass", "npm:3.3.6"],\
           ["yallist", "npm:4.0.0"]\
@@ -1735,7 +2064,7 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }],\
       ["npm:7.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-npm-7.1.2-3a5327d36d-10c0.zip/node_modules/minipass/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-npm-7.1.2-3a5327d36d-10c0.zip/node_modules/minipass/",\
         "packageDependencies": [\
           ["minipass", "npm:7.1.2"]\
         ],\
@@ -1744,21 +2073,21 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["minipass-collect", [\
       ["npm:2.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-collect-npm-2.0.1-73d3907e40-10c0.zip/node_modules/minipass-collect/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-collect-npm-2.0.1-73d3907e40-10c0.zip/node_modules/minipass-collect/",\
         "packageDependencies": [\
-          ["minipass-collect", "npm:2.0.1"],\
-          ["minipass", "npm:7.1.2"]\
+          ["minipass", "npm:7.1.2"],\
+          ["minipass-collect", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["minipass-fetch", [\
       ["npm:5.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-fetch-npm-5.0.1-34f846b2fb-10c0.zip/node_modules/minipass-fetch/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-fetch-npm-5.0.1-34f846b2fb-10c0.zip/node_modules/minipass-fetch/",\
         "packageDependencies": [\
-          ["minipass-fetch", "npm:5.0.1"],\
           ["encoding", "npm:0.1.13"],\
           ["minipass", "npm:7.1.2"],\
+          ["minipass-fetch", "npm:5.0.1"],\
           ["minipass-sized", "npm:2.0.0"],\
           ["minizlib", "npm:3.1.0"]\
         ],\
@@ -1767,47 +2096,56 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["minipass-flush", [\
       ["npm:1.0.5", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-flush-npm-1.0.5-efe79d9826-10c0.zip/node_modules/minipass-flush/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-flush-npm-1.0.5-efe79d9826-10c0.zip/node_modules/minipass-flush/",\
         "packageDependencies": [\
-          ["minipass-flush", "npm:1.0.5"],\
-          ["minipass", "npm:3.3.6"]\
+          ["minipass", "npm:3.3.6"],\
+          ["minipass-flush", "npm:1.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["minipass-pipeline", [\
       ["npm:1.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-pipeline-npm-1.2.4-5924cb077f-10c0.zip/node_modules/minipass-pipeline/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-pipeline-npm-1.2.4-5924cb077f-10c0.zip/node_modules/minipass-pipeline/",\
         "packageDependencies": [\
-          ["minipass-pipeline", "npm:1.2.4"],\
-          ["minipass", "npm:3.3.6"]\
+          ["minipass", "npm:3.3.6"],\
+          ["minipass-pipeline", "npm:1.2.4"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["minipass-sized", [\
       ["npm:2.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minipass-sized-npm-2.0.0-a911fc7d3f-10c0.zip/node_modules/minipass-sized/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minipass-sized-npm-2.0.0-a911fc7d3f-10c0.zip/node_modules/minipass-sized/",\
         "packageDependencies": [\
-          ["minipass-sized", "npm:2.0.0"],\
-          ["minipass", "npm:7.1.2"]\
+          ["minipass", "npm:7.1.2"],\
+          ["minipass-sized", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["minizlib", [\
       ["npm:3.1.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/minizlib-npm-3.1.0-6680befdba-10c0.zip/node_modules/minizlib/",\
+        "packageLocation": "../../../../.yarn/berry/cache/minizlib-npm-3.1.0-6680befdba-10c0.zip/node_modules/minizlib/",\
         "packageDependencies": [\
-          ["minizlib", "npm:3.1.0"],\
-          ["minipass", "npm:7.1.2"]\
+          ["minipass", "npm:7.1.2"],\
+          ["minizlib", "npm:3.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["mrmime", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/mrmime-npm-2.0.1-c00bdddb2f-10c0.zip/node_modules/mrmime/",\
+        "packageDependencies": [\
+          ["mrmime", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["ms", [\
       ["npm:2.1.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/ms-npm-2.1.3-81ff3cfac1-10c0.zip/node_modules/ms/",\
+        "packageLocation": "../../../../.yarn/berry/cache/ms-npm-2.1.3-81ff3cfac1-10c0.zip/node_modules/ms/",\
         "packageDependencies": [\
           ["ms", "npm:2.1.3"]\
         ],\
@@ -1816,7 +2154,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["nanoid", [\
       ["npm:3.3.11", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/nanoid-npm-3.3.11-f98c1f9ef6-10c0.zip/node_modules/nanoid/",\
+        "packageLocation": "../../../../.yarn/berry/cache/nanoid-npm-3.3.11-f98c1f9ef6-10c0.zip/node_modules/nanoid/",\
         "packageDependencies": [\
           ["nanoid", "npm:3.3.11"]\
         ],\
@@ -1825,7 +2163,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["negotiator", [\
       ["npm:1.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/negotiator-npm-1.0.0-47d727e27e-10c0.zip/node_modules/negotiator/",\
+        "packageLocation": "../../../../.yarn/berry/cache/negotiator-npm-1.0.0-47d727e27e-10c0.zip/node_modules/negotiator/",\
         "packageDependencies": [\
           ["negotiator", "npm:1.0.0"]\
         ],\
@@ -1846,11 +2184,11 @@ const RAW_RUNTIME_STATE =
       ["npm:12.2.0", {\
         "packageLocation": "./.yarn/unplugged/node-gyp-npm-12.2.0-11f8fe84f1/node_modules/node-gyp/",\
         "packageDependencies": [\
-          ["node-gyp", "npm:12.2.0"],\
           ["env-paths", "npm:2.2.1"],\
           ["exponential-backoff", "npm:3.1.3"],\
           ["graceful-fs", "npm:4.2.11"],\
           ["make-fetch-happen", "npm:15.0.3"],\
+          ["node-gyp", "npm:12.2.0"],\
           ["nopt", "npm:9.0.0"],\
           ["proc-log", "npm:6.1.0"],\
           ["semver", "npm:7.7.4"],\
@@ -1863,17 +2201,111 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["nopt", [\
       ["npm:9.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/nopt-npm-9.0.0-81316ec15c-10c0.zip/node_modules/nopt/",\
+        "packageLocation": "../../../../.yarn/berry/cache/nopt-npm-9.0.0-81316ec15c-10c0.zip/node_modules/nopt/",\
         "packageDependencies": [\
-          ["nopt", "npm:9.0.0"],\
-          ["abbrev", "npm:4.0.0"]\
+          ["abbrev", "npm:4.0.0"],\
+          ["nopt", "npm:9.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["obug", [\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/obug-npm-2.1.1-029730d296-10c0.zip/node_modules/obug/",\
+        "packageDependencies": [\
+          ["obug", "npm:2.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["oxfmt", [\
+      ["npm:0.35.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/oxfmt-npm-0.35.0-421754b7b7-10c0.zip/node_modules/oxfmt/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-android-arm-eabi", "npm:0.35.0"],\
+          ["@oxfmt/binding-android-arm64", "npm:0.35.0"],\
+          ["@oxfmt/binding-darwin-arm64", "npm:0.35.0"],\
+          ["@oxfmt/binding-darwin-x64", "npm:0.35.0"],\
+          ["@oxfmt/binding-freebsd-x64", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-arm-gnueabihf", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-arm-musleabihf", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-arm64-gnu", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-arm64-musl", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-ppc64-gnu", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-riscv64-gnu", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-riscv64-musl", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-s390x-gnu", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-x64-gnu", "npm:0.35.0"],\
+          ["@oxfmt/binding-linux-x64-musl", "npm:0.35.0"],\
+          ["@oxfmt/binding-openharmony-arm64", "npm:0.35.0"],\
+          ["@oxfmt/binding-win32-arm64-msvc", "npm:0.35.0"],\
+          ["@oxfmt/binding-win32-ia32-msvc", "npm:0.35.0"],\
+          ["@oxfmt/binding-win32-x64-msvc", "npm:0.35.0"],\
+          ["oxfmt", "npm:0.35.0"],\
+          ["tinypool", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["oxlint", [\
+      ["npm:1.50.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/oxlint-npm-1.50.0-33597680d6-10c0.zip/node_modules/oxlint/",\
+        "packageDependencies": [\
+          ["oxlint", "npm:1.50.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:1.50.0", {\
+        "packageLocation": "./.yarn/__virtual__/oxlint-virtual-edf2b20369/5/.yarn/berry/cache/oxlint-npm-1.50.0-33597680d6-10c0.zip/node_modules/oxlint/",\
+        "packageDependencies": [\
+          ["@oxlint/binding-android-arm-eabi", "npm:1.50.0"],\
+          ["@oxlint/binding-android-arm64", "npm:1.50.0"],\
+          ["@oxlint/binding-darwin-arm64", "npm:1.50.0"],\
+          ["@oxlint/binding-darwin-x64", "npm:1.50.0"],\
+          ["@oxlint/binding-freebsd-x64", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-arm-gnueabihf", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-arm-musleabihf", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-arm64-gnu", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-arm64-musl", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-ppc64-gnu", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-riscv64-gnu", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-riscv64-musl", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-s390x-gnu", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-x64-gnu", "npm:1.50.0"],\
+          ["@oxlint/binding-linux-x64-musl", "npm:1.50.0"],\
+          ["@oxlint/binding-openharmony-arm64", "npm:1.50.0"],\
+          ["@oxlint/binding-win32-arm64-msvc", "npm:1.50.0"],\
+          ["@oxlint/binding-win32-ia32-msvc", "npm:1.50.0"],\
+          ["@oxlint/binding-win32-x64-msvc", "npm:1.50.0"],\
+          ["@types/oxlint-tsgolint", null],\
+          ["oxlint", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:1.50.0"],\
+          ["oxlint-tsgolint", "npm:0.15.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/oxlint-tsgolint",\
+          "oxlint-tsgolint"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["oxlint-tsgolint", [\
+      ["npm:0.15.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/oxlint-tsgolint-npm-0.15.0-2b824afded-10c0.zip/node_modules/oxlint-tsgolint/",\
+        "packageDependencies": [\
+          ["@oxlint-tsgolint/darwin-arm64", "npm:0.15.0"],\
+          ["@oxlint-tsgolint/darwin-x64", "npm:0.15.0"],\
+          ["@oxlint-tsgolint/linux-arm64", "npm:0.15.0"],\
+          ["@oxlint-tsgolint/linux-x64", "npm:0.15.0"],\
+          ["@oxlint-tsgolint/win32-arm64", "npm:0.15.0"],\
+          ["@oxlint-tsgolint/win32-x64", "npm:0.15.0"],\
+          ["oxlint-tsgolint", "npm:0.15.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["p-map", [\
       ["npm:7.0.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/p-map-npm-7.0.4-39386109d0-10c0.zip/node_modules/p-map/",\
+        "packageLocation": "../../../../.yarn/berry/cache/p-map-npm-7.0.4-39386109d0-10c0.zip/node_modules/p-map/",\
         "packageDependencies": [\
           ["p-map", "npm:7.0.4"]\
         ],\
@@ -1882,46 +2314,37 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["parse5", [\
       ["npm:8.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/parse5-npm-8.0.0-c813f23978-10c0.zip/node_modules/parse5/",\
+        "packageLocation": "../../../../.yarn/berry/cache/parse5-npm-8.0.0-c813f23978-10c0.zip/node_modules/parse5/",\
         "packageDependencies": [\
-          ["parse5", "npm:8.0.0"],\
-          ["entities", "npm:6.0.1"]\
+          ["entities", "npm:6.0.1"],\
+          ["parse5", "npm:8.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["path-key", [\
+      ["npm:3.1.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/path-key-npm-3.1.1-0e66ea8321-10c0.zip/node_modules/path-key/",\
+        "packageDependencies": [\
+          ["path-key", "npm:3.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["path-scurry", [\
       ["npm:2.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/path-scurry-npm-2.0.1-7744619e5d-10c0.zip/node_modules/path-scurry/",\
+        "packageLocation": "../../../../.yarn/berry/cache/path-scurry-npm-2.0.1-7744619e5d-10c0.zip/node_modules/path-scurry/",\
         "packageDependencies": [\
-          ["path-scurry", "npm:2.0.1"],\
           ["lru-cache", "npm:11.2.5"],\
-          ["minipass", "npm:7.1.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["pathe", [\
-      ["npm:2.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/pathe-npm-2.0.3-0924246ee0-10c0.zip/node_modules/pathe/",\
-        "packageDependencies": [\
-          ["pathe", "npm:2.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["pathval", [\
-      ["npm:2.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/pathval-npm-2.0.1-7fb9ae82ba-10c0.zip/node_modules/pathval/",\
-        "packageDependencies": [\
-          ["pathval", "npm:2.0.1"]\
+          ["minipass", "npm:7.1.2"],\
+          ["path-scurry", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["picocolors", [\
       ["npm:1.1.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/picocolors-npm-1.1.1-4fede47cf1-10c0.zip/node_modules/picocolors/",\
+        "packageLocation": "../../../../.yarn/berry/cache/picocolors-npm-1.1.1-4fede47cf1-10c0.zip/node_modules/picocolors/",\
         "packageDependencies": [\
           ["picocolors", "npm:1.1.1"]\
         ],\
@@ -1930,20 +2353,39 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["picomatch", [\
       ["npm:4.0.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/picomatch-npm-4.0.3-0a647b87cc-10c0.zip/node_modules/picomatch/",\
+        "packageLocation": "../../../../.yarn/berry/cache/picomatch-npm-4.0.3-0a647b87cc-10c0.zip/node_modules/picomatch/",\
         "packageDependencies": [\
           ["picomatch", "npm:4.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
+    ["pixelmatch", [\
+      ["npm:7.1.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/pixelmatch-npm-7.1.0-52ee630781-10c0.zip/node_modules/pixelmatch/",\
+        "packageDependencies": [\
+          ["pixelmatch", "npm:7.1.0"],\
+          ["pngjs", "npm:7.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["pngjs", [\
+      ["npm:7.0.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/pngjs-npm-7.0.0-788de6ba02-10c0.zip/node_modules/pngjs/",\
+        "packageDependencies": [\
+          ["pngjs", "npm:7.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["postcss", [\
       ["npm:8.5.6", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/postcss-npm-8.5.6-e7f126c6f3-10c0.zip/node_modules/postcss/",\
+        "packageLocation": "../../../../.yarn/berry/cache/postcss-npm-8.5.6-e7f126c6f3-10c0.zip/node_modules/postcss/",\
         "packageDependencies": [\
-          ["postcss", "npm:8.5.6"],\
           ["nanoid", "npm:3.3.11"],\
           ["picocolors", "npm:1.1.1"],\
+          ["postcss", "npm:8.5.6"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -1951,7 +2393,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["proc-log", [\
       ["npm:6.1.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/proc-log-npm-6.1.0-84e609b3f4-10c0.zip/node_modules/proc-log/",\
+        "packageLocation": "../../../../.yarn/berry/cache/proc-log-npm-6.1.0-84e609b3f4-10c0.zip/node_modules/proc-log/",\
         "packageDependencies": [\
           ["proc-log", "npm:6.1.0"]\
         ],\
@@ -1960,10 +2402,10 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["promise-retry", [\
       ["npm:2.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/promise-retry-npm-2.0.1-871f0b01b7-10c0.zip/node_modules/promise-retry/",\
+        "packageLocation": "../../../../.yarn/berry/cache/promise-retry-npm-2.0.1-871f0b01b7-10c0.zip/node_modules/promise-retry/",\
         "packageDependencies": [\
-          ["promise-retry", "npm:2.0.1"],\
           ["err-code", "npm:2.0.3"],\
+          ["promise-retry", "npm:2.0.1"],\
           ["retry", "npm:0.12.0"]\
         ],\
         "linkType": "HARD"\
@@ -1971,7 +2413,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["punycode", [\
       ["npm:2.3.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/punycode-npm-2.3.1-97543c420d-10c0.zip/node_modules/punycode/",\
+        "packageLocation": "../../../../.yarn/berry/cache/punycode-npm-2.3.1-97543c420d-10c0.zip/node_modules/punycode/",\
         "packageDependencies": [\
           ["punycode", "npm:2.3.1"]\
         ],\
@@ -1980,7 +2422,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["readdirp", [\
       ["npm:4.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/readdirp-npm-4.1.2-3440472afe-10c0.zip/node_modules/readdirp/",\
+        "packageLocation": "../../../../.yarn/berry/cache/readdirp-npm-4.1.2-3440472afe-10c0.zip/node_modules/readdirp/",\
         "packageDependencies": [\
           ["readdirp", "npm:4.1.2"]\
         ],\
@@ -1989,10 +2431,10 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["redent", [\
       ["npm:3.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/redent-npm-3.0.0-31892f4906-10c0.zip/node_modules/redent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/redent-npm-3.0.0-31892f4906-10c0.zip/node_modules/redent/",\
         "packageDependencies": [\
-          ["redent", "npm:3.0.0"],\
           ["indent-string", "npm:4.0.0"],\
+          ["redent", "npm:3.0.0"],\
           ["strip-indent", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -2000,7 +2442,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["require-from-string", [\
       ["npm:2.0.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/require-from-string-npm-2.0.2-8557e0db12-10c0.zip/node_modules/require-from-string/",\
+        "packageLocation": "../../../../.yarn/berry/cache/require-from-string-npm-2.0.2-8557e0db12-10c0.zip/node_modules/require-from-string/",\
         "packageDependencies": [\
           ["require-from-string", "npm:2.0.2"]\
         ],\
@@ -2009,52 +2451,16 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["retry", [\
       ["npm:0.12.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/retry-npm-0.12.0-72ac7fb4cc-10c0.zip/node_modules/retry/",\
+        "packageLocation": "../../../../.yarn/berry/cache/retry-npm-0.12.0-72ac7fb4cc-10c0.zip/node_modules/retry/",\
         "packageDependencies": [\
           ["retry", "npm:0.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["rollup", [\
-      ["npm:4.57.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/rollup-npm-4.57.1-8b254d8a63-10c0.zip/node_modules/rollup/",\
-        "packageDependencies": [\
-          ["rollup", "npm:4.57.1"],\
-          ["@rollup/rollup-android-arm-eabi", "npm:4.57.1"],\
-          ["@rollup/rollup-android-arm64", "npm:4.57.1"],\
-          ["@rollup/rollup-darwin-arm64", "npm:4.57.1"],\
-          ["@rollup/rollup-darwin-x64", "npm:4.57.1"],\
-          ["@rollup/rollup-freebsd-arm64", "npm:4.57.1"],\
-          ["@rollup/rollup-freebsd-x64", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-arm-gnueabihf", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-arm-musleabihf", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-arm64-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-arm64-musl", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-loong64-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-loong64-musl", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-ppc64-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-ppc64-musl", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-riscv64-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-riscv64-musl", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-s390x-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-x64-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-linux-x64-musl", "npm:4.57.1"],\
-          ["@rollup/rollup-openbsd-x64", "npm:4.57.1"],\
-          ["@rollup/rollup-openharmony-arm64", "npm:4.57.1"],\
-          ["@rollup/rollup-win32-arm64-msvc", "npm:4.57.1"],\
-          ["@rollup/rollup-win32-ia32-msvc", "npm:4.57.1"],\
-          ["@rollup/rollup-win32-x64-gnu", "npm:4.57.1"],\
-          ["@rollup/rollup-win32-x64-msvc", "npm:4.57.1"],\
-          ["@types/estree", "npm:1.0.8"],\
-          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["rxjs", [\
       ["npm:7.8.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/rxjs-npm-7.8.2-80ecda9013-10c0.zip/node_modules/rxjs/",\
+        "packageLocation": "../../../../.yarn/berry/cache/rxjs-npm-7.8.2-80ecda9013-10c0.zip/node_modules/rxjs/",\
         "packageDependencies": [\
           ["rxjs", "npm:7.8.2"],\
           ["tslib", "npm:2.8.1"]\
@@ -2064,7 +2470,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["safer-buffer", [\
       ["npm:2.1.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/safer-buffer-npm-2.1.2-8d5c0b705e-10c0.zip/node_modules/safer-buffer/",\
+        "packageLocation": "../../../../.yarn/berry/cache/safer-buffer-npm-2.1.2-8d5c0b705e-10c0.zip/node_modules/safer-buffer/",\
         "packageDependencies": [\
           ["safer-buffer", "npm:2.1.2"]\
         ],\
@@ -2073,12 +2479,12 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["sass", [\
       ["npm:1.97.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/sass-npm-1.97.3-632c69cd32-10c0.zip/node_modules/sass/",\
+        "packageLocation": "../../../../.yarn/berry/cache/sass-npm-1.97.3-632c69cd32-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.97.3"],\
           ["@parcel/watcher", "npm:2.5.6"],\
           ["chokidar", "npm:4.0.3"],\
           ["immutable", "npm:5.1.4"],\
+          ["sass", "npm:1.97.3"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -2086,13 +2492,13 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["sass-embedded", [\
       ["npm:1.97.3", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/sass-embedded-npm-1.97.3-ed5a59acef-10c0.zip/node_modules/sass-embedded/",\
+        "packageLocation": "../../../../.yarn/berry/cache/sass-embedded-npm-1.97.3-ed5a59acef-10c0.zip/node_modules/sass-embedded/",\
         "packageDependencies": [\
-          ["sass-embedded", "npm:1.97.3"],\
           ["@bufbuild/protobuf", "npm:2.11.0"],\
           ["colorjs.io", "npm:0.5.2"],\
           ["immutable", "npm:5.1.4"],\
           ["rxjs", "npm:7.8.2"],\
+          ["sass-embedded", "npm:1.97.3"],\
           ["sass-embedded-all-unknown", "npm:1.97.3"],\
           ["sass-embedded-android-arm", "npm:1.97.3"],\
           ["sass-embedded-android-arm64", "npm:1.97.3"],\
@@ -2122,8 +2528,8 @@ const RAW_RUNTIME_STATE =
       ["npm:1.97.3", {\
         "packageLocation": "./.yarn/unplugged/sass-embedded-all-unknown-npm-1.97.3-5e2621f66c/node_modules/sass-embedded-all-unknown/",\
         "packageDependencies": [\
-          ["sass-embedded-all-unknown", "npm:1.97.3"],\
-          ["sass", "npm:1.97.3"]\
+          ["sass", "npm:1.97.3"],\
+          ["sass-embedded-all-unknown", "npm:1.97.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2258,8 +2664,8 @@ const RAW_RUNTIME_STATE =
       ["npm:1.97.3", {\
         "packageLocation": "./.yarn/unplugged/sass-embedded-unknown-all-npm-1.97.3-9a734f7734/node_modules/sass-embedded-unknown-all/",\
         "packageDependencies": [\
-          ["sass-embedded-unknown-all", "npm:1.97.3"],\
-          ["sass", "npm:1.97.3"]\
+          ["sass", "npm:1.97.3"],\
+          ["sass-embedded-unknown-all", "npm:1.97.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2284,7 +2690,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["saxes", [\
       ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/saxes-npm-6.0.0-31558949f5-10c0.zip/node_modules/saxes/",\
+        "packageLocation": "../../../../.yarn/berry/cache/saxes-npm-6.0.0-31558949f5-10c0.zip/node_modules/saxes/",\
         "packageDependencies": [\
           ["saxes", "npm:6.0.0"],\
           ["xmlchars", "npm:2.2.0"]\
@@ -2294,25 +2700,47 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["semver", [\
       ["npm:7.7.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/semver-npm-7.7.4-746e538da5-10c0.zip/node_modules/semver/",\
+        "packageLocation": "../../../../.yarn/berry/cache/semver-npm-7.7.4-746e538da5-10c0.zip/node_modules/semver/",\
         "packageDependencies": [\
           ["semver", "npm:7.7.4"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["siginfo", [\
+    ["shebang-command", [\
       ["npm:2.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/siginfo-npm-2.0.0-9bbac931f8-10c0.zip/node_modules/siginfo/",\
+        "packageLocation": "../../../../.yarn/berry/cache/shebang-command-npm-2.0.0-eb2b01921d-10c0.zip/node_modules/shebang-command/",\
         "packageDependencies": [\
-          ["siginfo", "npm:2.0.0"]\
+          ["shebang-command", "npm:2.0.0"],\
+          ["shebang-regex", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["shebang-regex", [\
+      ["npm:3.0.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/shebang-regex-npm-3.0.0-899a0cd65e-10c0.zip/node_modules/shebang-regex/",\
+        "packageDependencies": [\
+          ["shebang-regex", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sirv", [\
+      ["npm:3.0.2", {\
+        "packageLocation": "../../../../.yarn/berry/cache/sirv-npm-3.0.2-6cf658c733-10c0.zip/node_modules/sirv/",\
+        "packageDependencies": [\
+          ["@polka/url", "npm:1.0.0-next.29"],\
+          ["mrmime", "npm:2.0.1"],\
+          ["sirv", "npm:3.0.2"],\
+          ["totalist", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["smart-buffer", [\
       ["npm:4.2.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/smart-buffer-npm-4.2.0-5ac3f668bb-10c0.zip/node_modules/smart-buffer/",\
+        "packageLocation": "../../../../.yarn/berry/cache/smart-buffer-npm-4.2.0-5ac3f668bb-10c0.zip/node_modules/smart-buffer/",\
         "packageDependencies": [\
           ["smart-buffer", "npm:4.2.0"]\
         ],\
@@ -2321,30 +2749,30 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["socks", [\
       ["npm:2.8.7", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/socks-npm-2.8.7-d1d20aae19-10c0.zip/node_modules/socks/",\
+        "packageLocation": "../../../../.yarn/berry/cache/socks-npm-2.8.7-d1d20aae19-10c0.zip/node_modules/socks/",\
         "packageDependencies": [\
-          ["socks", "npm:2.8.7"],\
           ["ip-address", "npm:10.1.0"],\
-          ["smart-buffer", "npm:4.2.0"]\
+          ["smart-buffer", "npm:4.2.0"],\
+          ["socks", "npm:2.8.7"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["socks-proxy-agent", [\
       ["npm:8.0.5", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/socks-proxy-agent-npm-8.0.5-24d77a90dc-10c0.zip/node_modules/socks-proxy-agent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/socks-proxy-agent-npm-8.0.5-24d77a90dc-10c0.zip/node_modules/socks-proxy-agent/",\
         "packageDependencies": [\
-          ["socks-proxy-agent", "npm:8.0.5"],\
           ["agent-base", "npm:7.1.4"],\
           ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
-          ["socks", "npm:2.8.7"]\
+          ["socks", "npm:2.8.7"],\
+          ["socks-proxy-agent", "npm:8.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["source-map-js", [\
       ["npm:1.2.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/source-map-js-npm-1.2.1-b9a47d7e1a-10c0.zip/node_modules/source-map-js/",\
+        "packageLocation": "../../../../.yarn/berry/cache/source-map-js-npm-1.2.1-b9a47d7e1a-10c0.zip/node_modules/source-map-js/",\
         "packageDependencies": [\
           ["source-map-js", "npm:1.2.1"]\
         ],\
@@ -2353,26 +2781,17 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["ssri", [\
       ["npm:13.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/ssri-npm-13.0.0-f5fa93375d-10c0.zip/node_modules/ssri/",\
+        "packageLocation": "../../../../.yarn/berry/cache/ssri-npm-13.0.0-f5fa93375d-10c0.zip/node_modules/ssri/",\
         "packageDependencies": [\
-          ["ssri", "npm:13.0.0"],\
-          ["minipass", "npm:7.1.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["stackback", [\
-      ["npm:0.0.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/stackback-npm-0.0.2-73273dc92e-10c0.zip/node_modules/stackback/",\
-        "packageDependencies": [\
-          ["stackback", "npm:0.0.2"]\
+          ["minipass", "npm:7.1.2"],\
+          ["ssri", "npm:13.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["std-env", [\
       ["npm:3.10.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/std-env-npm-3.10.0-30d3e2646f-10c0.zip/node_modules/std-env/",\
+        "packageLocation": "../../../../.yarn/berry/cache/std-env-npm-3.10.0-30d3e2646f-10c0.zip/node_modules/std-env/",\
         "packageDependencies": [\
           ["std-env", "npm:3.10.0"]\
         ],\
@@ -2381,37 +2800,27 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["strip-indent", [\
       ["npm:3.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/strip-indent-npm-3.0.0-519e75a28d-10c0.zip/node_modules/strip-indent/",\
+        "packageLocation": "../../../../.yarn/berry/cache/strip-indent-npm-3.0.0-519e75a28d-10c0.zip/node_modules/strip-indent/",\
         "packageDependencies": [\
-          ["strip-indent", "npm:3.0.0"],\
-          ["min-indent", "npm:1.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["strip-literal", [\
-      ["npm:3.1.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/strip-literal-npm-3.1.0-b0340463b3-10c0.zip/node_modules/strip-literal/",\
-        "packageDependencies": [\
-          ["strip-literal", "npm:3.1.0"],\
-          ["js-tokens", "npm:9.0.1"]\
+          ["min-indent", "npm:1.0.1"],\
+          ["strip-indent", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["supports-color", [\
       ["npm:8.1.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/supports-color-npm-8.1.1-289e937149-10c0.zip/node_modules/supports-color/",\
+        "packageLocation": "../../../../.yarn/berry/cache/supports-color-npm-8.1.1-289e937149-10c0.zip/node_modules/supports-color/",\
         "packageDependencies": [\
-          ["supports-color", "npm:8.1.1"],\
-          ["has-flag", "npm:4.0.0"]\
+          ["has-flag", "npm:4.0.0"],\
+          ["supports-color", "npm:8.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["symbol-tree", [\
       ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/symbol-tree-npm-3.2.4-fe70cdb75b-10c0.zip/node_modules/symbol-tree/",\
+        "packageLocation": "../../../../.yarn/berry/cache/symbol-tree-npm-3.2.4-fe70cdb75b-10c0.zip/node_modules/symbol-tree/",\
         "packageDependencies": [\
           ["symbol-tree", "npm:3.2.4"]\
         ],\
@@ -2420,7 +2829,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["sync-child-process", [\
       ["npm:1.0.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/sync-child-process-npm-1.0.2-67949d5060-10c0.zip/node_modules/sync-child-process/",\
+        "packageLocation": "../../../../.yarn/berry/cache/sync-child-process-npm-1.0.2-67949d5060-10c0.zip/node_modules/sync-child-process/",\
         "packageDependencies": [\
           ["sync-child-process", "npm:1.0.2"],\
           ["sync-message-port", "npm:1.2.0"]\
@@ -2430,7 +2839,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["sync-message-port", [\
       ["npm:1.2.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/sync-message-port-npm-1.2.0-fc7832fb2f-10c0.zip/node_modules/sync-message-port/",\
+        "packageLocation": "../../../../.yarn/berry/cache/sync-message-port-npm-1.2.0-fc7832fb2f-10c0.zip/node_modules/sync-message-port/",\
         "packageDependencies": [\
           ["sync-message-port", "npm:1.2.0"]\
         ],\
@@ -2439,13 +2848,13 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["tar", [\
       ["npm:7.5.7", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tar-npm-7.5.7-053aec5a88-10c0.zip/node_modules/tar/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tar-npm-7.5.7-053aec5a88-10c0.zip/node_modules/tar/",\
         "packageDependencies": [\
-          ["tar", "npm:7.5.7"],\
           ["@isaacs/fs-minipass", "npm:4.0.1"],\
           ["chownr", "npm:3.0.0"],\
           ["minipass", "npm:7.1.2"],\
           ["minizlib", "npm:3.1.0"],\
+          ["tar", "npm:7.5.7"],\
           ["yallist", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -2453,7 +2862,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["tinybench", [\
       ["npm:2.9.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tinybench-npm-2.9.0-2861a048db-10c0.zip/node_modules/tinybench/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tinybench-npm-2.9.0-2861a048db-10c0.zip/node_modules/tinybench/",\
         "packageDependencies": [\
           ["tinybench", "npm:2.9.0"]\
         ],\
@@ -2461,55 +2870,37 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tinyexec", [\
-      ["npm:0.3.2", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tinyexec-npm-0.3.2-381b1e349c-10c0.zip/node_modules/tinyexec/",\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../../.yarn/berry/cache/tinyexec-npm-1.0.2-321b713e56-10c0.zip/node_modules/tinyexec/",\
         "packageDependencies": [\
-          ["tinyexec", "npm:0.3.2"]\
+          ["tinyexec", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["tinyglobby", [\
       ["npm:0.2.15", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tinyglobby-npm-0.2.15-0e783aadbd-10c0.zip/node_modules/tinyglobby/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tinyglobby-npm-0.2.15-0e783aadbd-10c0.zip/node_modules/tinyglobby/",\
         "packageDependencies": [\
-          ["tinyglobby", "npm:0.2.15"],\
           ["fdir", "virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0"],\
-          ["picomatch", "npm:4.0.3"]\
+          ["picomatch", "npm:4.0.3"],\
+          ["tinyglobby", "npm:0.2.15"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["tinypool", [\
-      ["npm:1.1.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tinypool-npm-1.1.1-6772421283-10c0.zip/node_modules/tinypool/",\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/tinypool-npm-2.1.0-e68b5eb405-10c0.zip/node_modules/tinypool/",\
         "packageDependencies": [\
-          ["tinypool", "npm:1.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["tinyrainbow", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tinyrainbow-npm-2.0.0-b4ba575b93-10c0.zip/node_modules/tinyrainbow/",\
-        "packageDependencies": [\
-          ["tinyrainbow", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["tinyspy", [\
-      ["npm:4.0.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tinyspy-npm-4.0.4-94a3f61e82-10c0.zip/node_modules/tinyspy/",\
-        "packageDependencies": [\
-          ["tinyspy", "npm:4.0.4"]\
+          ["tinypool", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["tldts", [\
       ["npm:7.0.22", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tldts-npm-7.0.22-0976c993ea-10c0.zip/node_modules/tldts/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tldts-npm-7.0.22-0976c993ea-10c0.zip/node_modules/tldts/",\
         "packageDependencies": [\
           ["tldts", "npm:7.0.22"],\
           ["tldts-core", "npm:7.0.22"]\
@@ -2519,36 +2910,45 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["tldts-core", [\
       ["npm:7.0.22", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tldts-core-npm-7.0.22-9fe42b458a-10c0.zip/node_modules/tldts-core/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tldts-core-npm-7.0.22-9fe42b458a-10c0.zip/node_modules/tldts-core/",\
         "packageDependencies": [\
           ["tldts-core", "npm:7.0.22"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
+    ["totalist", [\
+      ["npm:3.0.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/totalist-npm-3.0.1-91e71f3baa-10c0.zip/node_modules/totalist/",\
+        "packageDependencies": [\
+          ["totalist", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tough-cookie", [\
       ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tough-cookie-npm-6.0.0-c7d0e8e15a-10c0.zip/node_modules/tough-cookie/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tough-cookie-npm-6.0.0-c7d0e8e15a-10c0.zip/node_modules/tough-cookie/",\
         "packageDependencies": [\
-          ["tough-cookie", "npm:6.0.0"],\
-          ["tldts", "npm:7.0.22"]\
+          ["tldts", "npm:7.0.22"],\
+          ["tough-cookie", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["tr46", [\
       ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tr46-npm-6.0.0-86cfd34257-10c0.zip/node_modules/tr46/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tr46-npm-6.0.0-86cfd34257-10c0.zip/node_modules/tr46/",\
         "packageDependencies": [\
-          ["tr46", "npm:6.0.0"],\
-          ["punycode", "npm:2.3.1"]\
+          ["punycode", "npm:2.3.1"],\
+          ["tr46", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["tslib", [\
       ["npm:2.8.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/tslib-npm-2.8.1-66590b21b8-10c0.zip/node_modules/tslib/",\
+        "packageLocation": "../../../../.yarn/berry/cache/tslib-npm-2.8.1-66590b21b8-10c0.zip/node_modules/tslib/",\
         "packageDependencies": [\
           ["tslib", "npm:2.8.1"]\
         ],\
@@ -2557,7 +2957,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["typescript", [\
       ["patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/typescript-patch-6fda4d02cf-10c0.zip/node_modules/typescript/",\
+        "packageLocation": "../../../../.yarn/berry/cache/typescript-patch-6fda4d02cf-10c0.zip/node_modules/typescript/",\
         "packageDependencies": [\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
@@ -2566,7 +2966,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["undici", [\
       ["npm:7.21.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/undici-npm-7.21.0-babfc213f0-10c0.zip/node_modules/undici/",\
+        "packageLocation": "../../../../.yarn/berry/cache/undici-npm-7.21.0-babfc213f0-10c0.zip/node_modules/undici/",\
         "packageDependencies": [\
           ["undici", "npm:7.21.0"]\
         ],\
@@ -2575,7 +2975,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["undici-types", [\
       ["npm:7.16.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/undici-types-npm-7.16.0-0e23b08124-10c0.zip/node_modules/undici-types/",\
+        "packageLocation": "../../../../.yarn/berry/cache/undici-types-npm-7.16.0-0e23b08124-10c0.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:7.16.0"]\
         ],\
@@ -2584,7 +2984,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["unique-filename", [\
       ["npm:5.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/unique-filename-npm-5.0.0-605f54f18e-10c0.zip/node_modules/unique-filename/",\
+        "packageLocation": "../../../../.yarn/berry/cache/unique-filename-npm-5.0.0-605f54f18e-10c0.zip/node_modules/unique-filename/",\
         "packageDependencies": [\
           ["unique-filename", "npm:5.0.0"],\
           ["unique-slug", "npm:6.0.0"]\
@@ -2594,337 +2994,42 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["unique-slug", [\
       ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/unique-slug-npm-6.0.0-f26b186e99-10c0.zip/node_modules/unique-slug/",\
+        "packageLocation": "../../../../.yarn/berry/cache/unique-slug-npm-6.0.0-f26b186e99-10c0.zip/node_modules/unique-slug/",\
         "packageDependencies": [\
-          ["unique-slug", "npm:6.0.0"],\
-          ["imurmurhash", "npm:0.1.4"]\
+          ["imurmurhash", "npm:0.1.4"],\
+          ["unique-slug", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["varint", [\
       ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/varint-npm-6.0.0-a638e8f225-10c0.zip/node_modules/varint/",\
+        "packageLocation": "../../../../.yarn/berry/cache/varint-npm-6.0.0-a638e8f225-10c0.zip/node_modules/varint/",\
         "packageDependencies": [\
           ["varint", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["vite", [\
-      ["npm:7.3.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vite-npm-7.3.1-330baf2f0d-10c0.zip/node_modules/vite/",\
+    ["vite-plus", [\
+      ["npm:0.0.0-g52709db6.20260226-1136", {\
+        "packageLocation": "../../../../.yarn/berry/cache/vite-plus-npm-0.0.0-g52709db6.20260226-1136-b511e603f1-10c0.zip/node_modules/vite-plus/",\
         "packageDependencies": [\
-          ["vite", "npm:7.3.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:7.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-d20c069a3e/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vite-npm-7.3.1-330baf2f0d-10c0.zip/node_modules/vite/",\
-        "packageDependencies": [\
-          ["vite", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:7.3.1"],\
-          ["@types/jiti", null],\
-          ["@types/less", null],\
-          ["@types/lightningcss", null],\
-          ["@types/node", "npm:25.2.3"],\
-          ["@types/sass", null],\
-          ["@types/sass-embedded", null],\
-          ["@types/stylus", null],\
-          ["@types/sugarss", null],\
-          ["@types/terser", null],\
-          ["@types/tsx", null],\
-          ["@types/yaml", null],\
-          ["esbuild", "npm:0.27.3"],\
-          ["fdir", "virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0"],\
-          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
-          ["jiti", null],\
-          ["less", null],\
-          ["lightningcss", null],\
-          ["picomatch", "npm:4.0.3"],\
-          ["postcss", "npm:8.5.6"],\
-          ["rollup", "npm:4.57.1"],\
-          ["sass", null],\
-          ["sass-embedded", "npm:1.97.3"],\
-          ["stylus", null],\
-          ["sugarss", null],\
-          ["terser", null],\
-          ["tinyglobby", "npm:0.2.15"],\
-          ["tsx", null],\
-          ["yaml", null]\
-        ],\
-        "packagePeers": [\
-          "@types/jiti",\
-          "@types/less",\
-          "@types/lightningcss",\
-          "@types/node",\
-          "@types/sass-embedded",\
-          "@types/sass",\
-          "@types/stylus",\
-          "@types/sugarss",\
-          "@types/terser",\
-          "@types/tsx",\
-          "@types/yaml",\
-          "jiti",\
-          "less",\
-          "lightningcss",\
-          "sass-embedded",\
-          "sass",\
-          "stylus",\
-          "sugarss",\
-          "terser",\
-          "tsx",\
-          "yaml"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:cb1d79df3b4901790c8808db427c397bd3f613c8181bce1e1c99f654fcf8f1484eb3efeaaa7477306f7c95ff2d882d1e762cb59fa3743be7fbfd628566f4b6c1#npm:7.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-4df3cbb344/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vite-npm-7.3.1-330baf2f0d-10c0.zip/node_modules/vite/",\
-        "packageDependencies": [\
-          ["vite", "virtual:cb1d79df3b4901790c8808db427c397bd3f613c8181bce1e1c99f654fcf8f1484eb3efeaaa7477306f7c95ff2d882d1e762cb59fa3743be7fbfd628566f4b6c1#npm:7.3.1"],\
-          ["@types/jiti", null],\
-          ["@types/less", null],\
-          ["@types/lightningcss", null],\
-          ["@types/node", null],\
-          ["@types/sass", null],\
-          ["@types/sass-embedded", null],\
-          ["@types/stylus", null],\
-          ["@types/sugarss", null],\
-          ["@types/terser", null],\
-          ["@types/tsx", null],\
-          ["@types/yaml", null],\
-          ["esbuild", "npm:0.27.3"],\
-          ["fdir", "virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0"],\
-          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
-          ["jiti", null],\
-          ["less", null],\
-          ["lightningcss", null],\
-          ["picomatch", "npm:4.0.3"],\
-          ["postcss", "npm:8.5.6"],\
-          ["rollup", "npm:4.57.1"],\
-          ["sass", null],\
-          ["sass-embedded", null],\
-          ["stylus", null],\
-          ["sugarss", null],\
-          ["terser", null],\
-          ["tinyglobby", "npm:0.2.15"],\
-          ["tsx", null],\
-          ["yaml", null]\
-        ],\
-        "packagePeers": [\
-          "@types/jiti",\
-          "@types/less",\
-          "@types/lightningcss",\
-          "@types/node",\
-          "@types/sass-embedded",\
-          "@types/sass",\
-          "@types/stylus",\
-          "@types/sugarss",\
-          "@types/terser",\
-          "@types/tsx",\
-          "@types/yaml",\
-          "jiti",\
-          "less",\
-          "lightningcss",\
-          "sass-embedded",\
-          "sass",\
-          "stylus",\
-          "sugarss",\
-          "terser",\
-          "tsx",\
-          "yaml"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:7.3.1", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-1741547365/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vite-npm-7.3.1-330baf2f0d-10c0.zip/node_modules/vite/",\
-        "packageDependencies": [\
-          ["vite", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:7.3.1"],\
-          ["@types/jiti", null],\
-          ["@types/less", null],\
-          ["@types/lightningcss", null],\
-          ["@types/node", "npm:25.2.3"],\
-          ["@types/sass", null],\
-          ["@types/sass-embedded", null],\
-          ["@types/stylus", null],\
-          ["@types/sugarss", null],\
-          ["@types/terser", null],\
-          ["@types/tsx", null],\
-          ["@types/yaml", null],\
-          ["esbuild", "npm:0.27.3"],\
-          ["fdir", "virtual:0e783aadbd2b4b8e6f6056033c0b290501892d23bc7c5dad5477e00e48ad8bd3e4434c3962a52dd75a58e06dbb7218094a494bac954ef2f7f6fdb65d9717e5f4#npm:6.5.0"],\
-          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
-          ["jiti", null],\
-          ["less", null],\
-          ["lightningcss", null],\
-          ["picomatch", "npm:4.0.3"],\
-          ["postcss", "npm:8.5.6"],\
-          ["rollup", "npm:4.57.1"],\
-          ["sass", null],\
-          ["sass-embedded", null],\
-          ["stylus", null],\
-          ["sugarss", null],\
-          ["terser", null],\
-          ["tinyglobby", "npm:0.2.15"],\
-          ["tsx", null],\
-          ["yaml", null]\
-        ],\
-        "packagePeers": [\
-          "@types/jiti",\
-          "@types/less",\
-          "@types/lightningcss",\
-          "@types/node",\
-          "@types/sass-embedded",\
-          "@types/sass",\
-          "@types/stylus",\
-          "@types/sugarss",\
-          "@types/terser",\
-          "@types/tsx",\
-          "@types/yaml",\
-          "jiti",\
-          "less",\
-          "lightningcss",\
-          "sass-embedded",\
-          "sass",\
-          "stylus",\
-          "sugarss",\
-          "terser",\
-          "tsx",\
-          "yaml"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["vite-node", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vite-node-npm-3.2.4-cb1d79df3b-10c0.zip/node_modules/vite-node/",\
-        "packageDependencies": [\
-          ["vite-node", "npm:3.2.4"],\
+          ["@oxc-project/types", "npm:0.114.0"],\
+          ["@voidzero-dev/vite-plus-core", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-darwin-arm64", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-darwin-x64", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-linux-arm64-gnu", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-linux-x64-gnu", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-test", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:0.0.0-g52709db6.20260226-1136"],\
+          ["@voidzero-dev/vite-plus-win32-x64-msvc", "npm:0.0.0-g52709db6.20260226-1136"],\
           ["cac", "npm:6.7.14"],\
-          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
-          ["es-module-lexer", "npm:1.7.0"],\
-          ["pathe", "npm:2.0.3"],\
-          ["vite", "virtual:cb1d79df3b4901790c8808db427c397bd3f613c8181bce1e1c99f654fcf8f1484eb3efeaaa7477306f7c95ff2d882d1e762cb59fa3743be7fbfd628566f4b6c1#npm:7.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["vitest", [\
-      ["npm:3.2.4", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vitest-npm-3.2.4-7a07f931b1-10c0.zip/node_modules/vitest/",\
-        "packageDependencies": [\
-          ["vitest", "npm:3.2.4"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:3.2.4", {\
-        "packageLocation": "./.yarn/__virtual__/vitest-virtual-d3ae2ebae0/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vitest-npm-3.2.4-7a07f931b1-10c0.zip/node_modules/vitest/",\
-        "packageDependencies": [\
-          ["vitest", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:3.2.4"],\
-          ["@edge-runtime/vm", null],\
-          ["@types/chai", "npm:5.2.3"],\
-          ["@types/debug", null],\
-          ["@types/edge-runtime__vm", null],\
-          ["@types/happy-dom", null],\
-          ["@types/jsdom", null],\
-          ["@types/node", "npm:25.2.3"],\
-          ["@types/vitest__browser", null],\
-          ["@types/vitest__ui", null],\
-          ["@vitest/browser", null],\
-          ["@vitest/expect", "npm:3.2.4"],\
-          ["@vitest/mocker", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:3.2.4"],\
-          ["@vitest/pretty-format", "npm:3.2.4"],\
-          ["@vitest/runner", "npm:3.2.4"],\
-          ["@vitest/snapshot", "npm:3.2.4"],\
-          ["@vitest/spy", "npm:3.2.4"],\
-          ["@vitest/ui", null],\
-          ["@vitest/utils", "npm:3.2.4"],\
-          ["chai", "npm:5.3.3"],\
-          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
-          ["expect-type", "npm:1.3.0"],\
-          ["happy-dom", null],\
-          ["jsdom", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0"],\
-          ["magic-string", "npm:0.30.21"],\
-          ["pathe", "npm:2.0.3"],\
-          ["picomatch", "npm:4.0.3"],\
-          ["std-env", "npm:3.10.0"],\
-          ["tinybench", "npm:2.9.0"],\
-          ["tinyexec", "npm:0.3.2"],\
-          ["tinyglobby", "npm:0.2.15"],\
-          ["tinypool", "npm:1.1.1"],\
-          ["tinyrainbow", "npm:2.0.0"],\
-          ["vite", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:7.3.1"],\
-          ["vite-node", "npm:3.2.4"],\
-          ["why-is-node-running", "npm:2.3.0"]\
-        ],\
-        "packagePeers": [\
-          "@edge-runtime/vm",\
-          "@types/debug",\
-          "@types/edge-runtime__vm",\
-          "@types/happy-dom",\
-          "@types/jsdom",\
-          "@types/node",\
-          "@types/vitest__browser",\
-          "@types/vitest__ui",\
-          "@vitest/browser",\
-          "@vitest/ui",\
-          "happy-dom",\
-          "jsdom"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:5edfa9ef18ce67313756e4ea7eec097e72c3bf74cb0406cdfe526936af94a3d945e92e3b75c836fd6c49aaa102b9fe810a461e9c1fb2e3eef03936b9f84a3d72#npm:3.2.4", {\
-        "packageLocation": "./.yarn/__virtual__/vitest-virtual-d281ba66c9/4/Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/vitest-npm-3.2.4-7a07f931b1-10c0.zip/node_modules/vitest/",\
-        "packageDependencies": [\
-          ["vitest", "virtual:5edfa9ef18ce67313756e4ea7eec097e72c3bf74cb0406cdfe526936af94a3d945e92e3b75c836fd6c49aaa102b9fe810a461e9c1fb2e3eef03936b9f84a3d72#npm:3.2.4"],\
-          ["@edge-runtime/vm", null],\
-          ["@types/chai", "npm:5.2.3"],\
-          ["@types/debug", null],\
-          ["@types/edge-runtime__vm", null],\
-          ["@types/happy-dom", null],\
-          ["@types/jsdom", null],\
-          ["@types/node", "npm:25.2.3"],\
-          ["@types/vitest__browser", null],\
-          ["@types/vitest__ui", null],\
-          ["@vitest/browser", null],\
-          ["@vitest/expect", "npm:3.2.4"],\
-          ["@vitest/mocker", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:3.2.4"],\
-          ["@vitest/pretty-format", "npm:3.2.4"],\
-          ["@vitest/runner", "npm:3.2.4"],\
-          ["@vitest/snapshot", "npm:3.2.4"],\
-          ["@vitest/spy", "npm:3.2.4"],\
-          ["@vitest/ui", null],\
-          ["@vitest/utils", "npm:3.2.4"],\
-          ["chai", "npm:5.3.3"],\
-          ["debug", "virtual:643ed7cc338bcf145a82d8b05b3bef6bcf150ca545df386225596f10ce53cc90b88b3ca83e348ade1ccea5f3f8e76c92d2f0e2ba544da60d40aff9921c56872d#npm:4.4.3"],\
-          ["expect-type", "npm:1.3.0"],\
-          ["happy-dom", null],\
-          ["jsdom", null],\
-          ["magic-string", "npm:0.30.21"],\
-          ["pathe", "npm:2.0.3"],\
-          ["picomatch", "npm:4.0.3"],\
-          ["std-env", "npm:3.10.0"],\
-          ["tinybench", "npm:2.9.0"],\
-          ["tinyexec", "npm:0.3.2"],\
-          ["tinyglobby", "npm:0.2.15"],\
-          ["tinypool", "npm:1.1.1"],\
-          ["tinyrainbow", "npm:2.0.0"],\
-          ["vite", "virtual:d3ae2ebae017f30414112ba8fceb83914b42581c19a1bec08e94ca81688f4981902f14010fa1f5f4c78b2a6eb57d6323ecd3645c93306f63324542d075e0743c#npm:7.3.1"],\
-          ["vite-node", "npm:3.2.4"],\
-          ["why-is-node-running", "npm:2.3.0"]\
-        ],\
-        "packagePeers": [\
-          "@edge-runtime/vm",\
-          "@types/debug",\
-          "@types/edge-runtime__vm",\
-          "@types/happy-dom",\
-          "@types/jsdom",\
-          "@types/node",\
-          "@types/vitest__browser",\
-          "@types/vitest__ui",\
-          "@vitest/browser",\
-          "@vitest/ui",\
-          "happy-dom",\
-          "jsdom"\
+          ["cross-spawn", "npm:7.0.6"],\
+          ["oxfmt", "npm:0.35.0"],\
+          ["oxlint", "virtual:b511e603f1464e3891d1145615f58f188ba0723e7e91b96528171db19f2ab5abfa7a863c5eaf5349cd76affd2f4e52f29ba612263de4943e28dea1e653b95b20#npm:1.50.0"],\
+          ["oxlint-tsgolint", "npm:0.15.0"],\
+          ["picocolors", "npm:1.1.1"],\
+          ["vite-plus", "npm:0.0.0-g52709db6.20260226-1136"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2933,21 +3038,28 @@ const RAW_RUNTIME_STATE =
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["vitest-fail-yarn", "workspace:."],\
           ["@testing-library/jest-dom", "npm:6.9.1"],\
           ["@types/node", "npm:25.2.3"],\
           ["jsdom", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:28.0.0"],\
           ["sass-embedded", "npm:1.97.3"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
-          ["vite", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:7.3.1"],\
-          ["vitest", "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:3.2.4"]\
+          ["vite", [\
+            "@voidzero-dev/vite-plus-core",\
+            "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136"\
+          ]],\
+          ["vite-plus", "npm:0.0.0-g52709db6.20260226-1136"],\
+          ["vitest", [\
+            "@voidzero-dev/vite-plus-test",\
+            "virtual:2eff68f4df91c8b851757ed04e3ff4b4e20aa29cbe3a5b19f028aaf196d79766f017fe2793aa6bd0a342812d02ccccecf5da00b214b4a1fad15ef2cca6836a22#npm:0.0.0-g52709db6.20260226-1136"\
+          ]],\
+          ["vitest-fail-yarn", "workspace:."]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
     ["w3c-xmlserializer", [\
       ["npm:5.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/w3c-xmlserializer-npm-5.0.0-589edd7bff-10c0.zip/node_modules/w3c-xmlserializer/",\
+        "packageLocation": "../../../../.yarn/berry/cache/w3c-xmlserializer-npm-5.0.0-589edd7bff-10c0.zip/node_modules/w3c-xmlserializer/",\
         "packageDependencies": [\
           ["w3c-xmlserializer", "npm:5.0.0"],\
           ["xml-name-validator", "npm:5.0.0"]\
@@ -2957,7 +3069,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["webidl-conversions", [\
       ["npm:8.0.1", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/webidl-conversions-npm-8.0.1-0a5c649859-10c0.zip/node_modules/webidl-conversions/",\
+        "packageLocation": "../../../../.yarn/berry/cache/webidl-conversions-npm-8.0.1-0a5c649859-10c0.zip/node_modules/webidl-conversions/",\
         "packageDependencies": [\
           ["webidl-conversions", "npm:8.0.1"]\
         ],\
@@ -2966,7 +3078,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["whatwg-mimetype", [\
       ["npm:5.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/whatwg-mimetype-npm-5.0.0-2b2a97ac39-10c0.zip/node_modules/whatwg-mimetype/",\
+        "packageLocation": "../../../../.yarn/berry/cache/whatwg-mimetype-npm-5.0.0-2b2a97ac39-10c0.zip/node_modules/whatwg-mimetype/",\
         "packageDependencies": [\
           ["whatwg-mimetype", "npm:5.0.0"]\
         ],\
@@ -2975,40 +3087,63 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["whatwg-url", [\
       ["npm:16.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/whatwg-url-npm-16.0.0-9e7c9550c9-10c0.zip/node_modules/whatwg-url/",\
+        "packageLocation": "../../../../.yarn/berry/cache/whatwg-url-npm-16.0.0-9e7c9550c9-10c0.zip/node_modules/whatwg-url/",\
         "packageDependencies": [\
-          ["whatwg-url", "npm:16.0.0"],\
           ["@exodus/bytes", "virtual:9e7c9550c969468956daaefc85c082f4c3c20c9703d0e98273e44416b6b9c2e9f4d05648b142b8118327316be05f39bcc685ee38ad8289578b5ce6b1073abf81#npm:1.11.0"],\
           ["tr46", "npm:6.0.0"],\
-          ["webidl-conversions", "npm:8.0.1"]\
+          ["webidl-conversions", "npm:8.0.1"],\
+          ["whatwg-url", "npm:16.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["which", [\
-      ["npm:6.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/which-npm-6.0.0-48f25f0ec8-10c0.zip/node_modules/which/",\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../../../.yarn/berry/cache/which-npm-2.0.2-320ddf72f7-10c0.zip/node_modules/which/",\
         "packageDependencies": [\
-          ["which", "npm:6.0.0"],\
-          ["isexe", "npm:3.1.2"]\
+          ["isexe", "npm:2.0.0"],\
+          ["which", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.0.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/which-npm-6.0.0-48f25f0ec8-10c0.zip/node_modules/which/",\
+        "packageDependencies": [\
+          ["isexe", "npm:3.1.2"],\
+          ["which", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
-    ["why-is-node-running", [\
-      ["npm:2.3.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/why-is-node-running-npm-2.3.0-011cf61a18-10c0.zip/node_modules/why-is-node-running/",\
+    ["ws", [\
+      ["npm:8.19.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/ws-npm-8.19.0-c967c046a5-10c0.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["why-is-node-running", "npm:2.3.0"],\
-          ["siginfo", "npm:2.0.0"],\
-          ["stackback", "npm:0.0.2"]\
+          ["ws", "npm:8.19.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1dc4996762043fe5cfaf43547349d52f5ed411c038f4cfd2eb3044d3ddf858512dbad2a4f1825211fdfd97cb2efaa7c21b0725c908a918739e30a3dbfa369fb1#npm:8.19.0", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-e45d2e3727/5/.yarn/berry/cache/ws-npm-8.19.0-c967c046a5-10c0.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["@types/bufferutil", null],\
+          ["@types/utf-8-validate", null],\
+          ["bufferutil", null],\
+          ["utf-8-validate", null],\
+          ["ws", "virtual:1dc4996762043fe5cfaf43547349d52f5ed411c038f4cfd2eb3044d3ddf858512dbad2a4f1825211fdfd97cb2efaa7c21b0725c908a918739e30a3dbfa369fb1#npm:8.19.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/bufferutil",\
+          "@types/utf-8-validate",\
+          "bufferutil",\
+          "utf-8-validate"\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["xml-name-validator", [\
       ["npm:5.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/xml-name-validator-npm-5.0.0-0e0ec66944-10c0.zip/node_modules/xml-name-validator/",\
+        "packageLocation": "../../../../.yarn/berry/cache/xml-name-validator-npm-5.0.0-0e0ec66944-10c0.zip/node_modules/xml-name-validator/",\
         "packageDependencies": [\
           ["xml-name-validator", "npm:5.0.0"]\
         ],\
@@ -3017,7 +3152,7 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["xmlchars", [\
       ["npm:2.2.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/xmlchars-npm-2.2.0-8b78f0f5e4-10c0.zip/node_modules/xmlchars/",\
+        "packageLocation": "../../../../.yarn/berry/cache/xmlchars-npm-2.2.0-8b78f0f5e4-10c0.zip/node_modules/xmlchars/",\
         "packageDependencies": [\
           ["xmlchars", "npm:2.2.0"]\
         ],\
@@ -3026,14 +3161,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["yallist", [\
       ["npm:4.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/yallist-npm-4.0.0-b493d9e907-10c0.zip/node_modules/yallist/",\
+        "packageLocation": "../../../../.yarn/berry/cache/yallist-npm-4.0.0-b493d9e907-10c0.zip/node_modules/yallist/",\
         "packageDependencies": [\
           ["yallist", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }],\
       ["npm:5.0.0", {\
-        "packageLocation": "../../../Users/pzaczkiewicz/AppData/Local/Yarn/Berry/cache/yallist-npm-5.0.0-8732dd9f1c-10c0.zip/node_modules/yallist/",\
+        "packageLocation": "../../../../.yarn/berry/cache/yallist-npm-5.0.0-8732dd9f1c-10c0.zip/node_modules/yallist/",\
         "packageDependencies": [\
           ["yallist", "npm:5.0.0"]\
         ],\
@@ -3452,7 +3587,7 @@ async function copyImpl(prelayout, postlayout, destinationFs, destination, sourc
 async function maybeLStat(baseFs, p) {
   try {
     return await baseFs.lstatPromise(p);
-  } catch (e) {
+  } catch {
     return null;
   }
 }
@@ -3711,7 +3846,7 @@ class CustomStatWatcher extends events.EventEmitter {
   stat() {
     try {
       return this.fakeFs.statSync(this.path, { bigint: this.bigint });
-    } catch (error) {
+    } catch {
       const statInstance = this.bigint ? new BigIntStatsEntry() : new StatEntry();
       return clearStats(statInstance);
     }
@@ -4037,7 +4172,7 @@ class FakeFS {
     let current = Buffer.alloc(0);
     try {
       current = await this.readFilePromise(p);
-    } catch (error) {
+    } catch {
     }
     if (Buffer.compare(current, content) === 0)
       return;
@@ -4047,7 +4182,7 @@ class FakeFS {
     let current = ``;
     try {
       current = await this.readFilePromise(p, `utf8`);
-    } catch (error) {
+    } catch {
     }
     const normalizedContent = automaticNewlines ? normalizeLineEndings(current, content) : content;
     if (current === normalizedContent)
@@ -4065,7 +4200,7 @@ class FakeFS {
     let current = Buffer.alloc(0);
     try {
       current = this.readFileSync(p);
-    } catch (error) {
+    } catch {
     }
     if (Buffer.compare(current, content) === 0)
       return;
@@ -4075,7 +4210,7 @@ class FakeFS {
     let current = ``;
     try {
       current = this.readFileSync(p, `utf8`);
-    } catch (error) {
+    } catch {
     }
     const normalizedContent = automaticNewlines ? normalizeLineEndings(current, content) : content;
     if (current === normalizedContent)
@@ -4115,13 +4250,13 @@ class FakeFS {
       let pid;
       try {
         [pid] = await this.readJsonPromise(lockPath);
-      } catch (error) {
+      } catch {
         return Date.now() - startTime < 500;
       }
       try {
         process.kill(pid, 0);
         return true;
-      } catch (error) {
+      } catch {
         return false;
       }
     };
@@ -4134,7 +4269,7 @@ class FakeFS {
             try {
               await this.unlinkPromise(lockPath);
               continue;
-            } catch (error2) {
+            } catch {
             }
           }
           if (Date.now() - startTime < 60 * 1e3) {
@@ -4154,7 +4289,7 @@ class FakeFS {
       try {
         await this.closePromise(fd);
         await this.unlinkPromise(lockPath);
-      } catch (error) {
+      } catch {
       }
     }
   }
@@ -4450,7 +4585,7 @@ class ProxiedFS extends FakeFS {
   watch(p, a, b) {
     return this.baseFs.watch(
       this.mapToBase(p),
-      // @ts-expect-error
+      // @ts-expect-error - reason TBS
       a,
       b
     );
@@ -4458,7 +4593,7 @@ class ProxiedFS extends FakeFS {
   watchFile(p, a, b) {
     return this.baseFs.watchFile(
       this.mapToBase(p),
-      // @ts-expect-error
+      // @ts-expect-error - reason TBS
       a,
       b
     );
@@ -4878,7 +5013,7 @@ class NodeFS extends BasePortableFakeFS {
   watch(p, a, b) {
     return this.realFs.watch(
       npath.fromPortablePath(p),
-      // @ts-expect-error
+      // @ts-expect-error - reason TBS
       a,
       b
     );
@@ -4886,7 +5021,7 @@ class NodeFS extends BasePortableFakeFS {
   watchFile(p, a, b) {
     return this.realFs.watchFile(
       npath.fromPortablePath(p),
-      // @ts-expect-error
+      // @ts-expect-error - reason TBS
       a,
       b
     );
@@ -5304,7 +5439,7 @@ class MountFS extends BasePortableFakeFS {
       let content;
       try {
         content = await sourceFs.readFilePromise(sourceP2);
-      } catch (error) {
+      } catch {
         throw Object.assign(new Error(`EINVAL: invalid argument, copyfile '${sourceP2}' -> '${destP2}'`), { code: `EINVAL` });
       }
       await destFs.writeFilePromise(destP2, content);
@@ -5336,7 +5471,7 @@ class MountFS extends BasePortableFakeFS {
       let content;
       try {
         content = sourceFs.readFileSync(sourceP2);
-      } catch (error) {
+      } catch {
         throw Object.assign(new Error(`EINVAL: invalid argument, copyfile '${sourceP2}' -> '${destP2}'`), { code: `EINVAL` });
       }
       destFs.writeFileSync(destP2, content);
@@ -5581,14 +5716,14 @@ class MountFS extends BasePortableFakeFS {
     return this.makeCallSync(p, () => {
       return this.baseFs.watch(
         p,
-        // @ts-expect-error
+        // @ts-expect-error - reason TBS
         a,
         b
       );
     }, (mountFs, { subPath }) => {
       return mountFs.watch(
         subPath,
-        // @ts-expect-error
+        // @ts-expect-error - reason TBS
         a,
         b
       );
@@ -5598,7 +5733,7 @@ class MountFS extends BasePortableFakeFS {
     return this.makeCallSync(p, () => {
       return this.baseFs.watchFile(
         p,
-        // @ts-expect-error
+        // @ts-expect-error - reason TBS
         a,
         b
       );
@@ -5935,28 +6070,40 @@ class FileHandle {
   sync() {
     throw new Error(`Method not implemented.`);
   }
-  async read(bufferOrOptions, offset, length, position) {
+  async read(bufferOrOptions, offsetOrOptions, length, position) {
     try {
       this[kRef](this.read);
       let buffer;
-      if (!Buffer.isBuffer(bufferOrOptions)) {
-        bufferOrOptions ??= {};
-        buffer = bufferOrOptions.buffer ?? Buffer.alloc(16384);
-        offset = bufferOrOptions.offset || 0;
-        length = bufferOrOptions.length ?? buffer.byteLength;
-        position = bufferOrOptions.position ?? null;
+      let offset;
+      if (!ArrayBuffer.isView(bufferOrOptions)) {
+        buffer = bufferOrOptions?.buffer ?? Buffer.alloc(16384);
+        offset = bufferOrOptions?.offset ?? 0;
+        length = bufferOrOptions?.length ?? buffer.byteLength - offset;
+        position = bufferOrOptions?.position ?? null;
+      } else if (typeof offsetOrOptions === `object` && offsetOrOptions !== null) {
+        buffer = bufferOrOptions;
+        offset = offsetOrOptions?.offset ?? 0;
+        length = offsetOrOptions?.length ?? buffer.byteLength - offset;
+        position = offsetOrOptions?.position ?? null;
       } else {
         buffer = bufferOrOptions;
+        offset = offsetOrOptions ?? 0;
+        length ??= 0;
       }
-      offset ??= 0;
-      length ??= 0;
       if (length === 0) {
         return {
           bytesRead: length,
           buffer
         };
       }
-      const bytesRead = await this[kBaseFs].readPromise(this.fd, buffer, offset, length, position);
+      const bytesRead = await this[kBaseFs].readPromise(
+        this.fd,
+        // FIXME: FakeFS should support ArrayBufferViews directly
+        Buffer.isBuffer(buffer) ? buffer : Buffer.from(buffer.buffer, buffer.byteOffset, buffer.byteLength),
+        offset,
+        length,
+        position
+      );
       return {
         bytesRead,
         buffer
@@ -6251,7 +6398,7 @@ function patchFs(patchedFs, fakeFs) {
     setupFn(patchedFs, `existsSync`, (p) => {
       try {
         return fakeFs.existsSync(p);
-      } catch (error) {
+      } catch {
         return false;
       }
     });
@@ -7190,14 +7337,16 @@ class ZipOpenFS extends MountFS {
       return new ZipFS(p, {
         baseFs,
         readOnly: readOnlyArchives,
-        stats: baseFs.statSync(p)
+        stats: baseFs.statSync(p),
+        customZipImplementation: opts.customZipImplementation
       });
     };
     const factoryPromise = async (baseFs, p) => {
       const zipOptions = {
         baseFs,
         readOnly: readOnlyArchives,
-        stats: await baseFs.statPromise(p)
+        stats: await baseFs.statPromise(p),
+        customZipImplementation: opts.customZipImplementation
       };
       return () => {
         return new ZipFS(p, zipOptions);
@@ -7212,6 +7361,236 @@ class ZipOpenFS extends MountFS {
   }
 }
 
+class LibzipError extends Error {
+  code;
+  constructor(message, code) {
+    super(message);
+    this.name = `Libzip Error`;
+    this.code = code;
+  }
+}
+class LibZipImpl {
+  libzip;
+  lzSource;
+  zip;
+  listings;
+  symlinkCount;
+  filesShouldBeCached = true;
+  constructor(opts) {
+    const buffer = `buffer` in opts ? opts.buffer : opts.baseFs.readFileSync(opts.path);
+    this.libzip = getInstance();
+    const errPtr = this.libzip.malloc(4);
+    try {
+      let flags = 0;
+      if (opts.readOnly)
+        flags |= this.libzip.ZIP_RDONLY;
+      const lzSource = this.allocateUnattachedSource(buffer);
+      try {
+        this.zip = this.libzip.openFromSource(lzSource, flags, errPtr);
+        this.lzSource = lzSource;
+      } catch (error) {
+        this.libzip.source.free(lzSource);
+        throw error;
+      }
+      if (this.zip === 0) {
+        const error = this.libzip.struct.errorS();
+        this.libzip.error.initWithCode(error, this.libzip.getValue(errPtr, `i32`));
+        throw this.makeLibzipError(error);
+      }
+    } finally {
+      this.libzip.free(errPtr);
+    }
+    const entryCount = this.libzip.getNumEntries(this.zip, 0);
+    const listings = new Array(entryCount);
+    for (let t = 0; t < entryCount; ++t)
+      listings[t] = this.libzip.getName(this.zip, t, 0);
+    this.listings = listings;
+    this.symlinkCount = this.libzip.ext.countSymlinks(this.zip);
+    if (this.symlinkCount === -1) {
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    }
+  }
+  getSymlinkCount() {
+    return this.symlinkCount;
+  }
+  getListings() {
+    return this.listings;
+  }
+  stat(entry) {
+    const stat = this.libzip.struct.statS();
+    const rc = this.libzip.statIndex(this.zip, entry, 0, 0, stat);
+    if (rc === -1)
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    const size = this.libzip.struct.statSize(stat) >>> 0;
+    const mtime = this.libzip.struct.statMtime(stat) >>> 0;
+    const crc = this.libzip.struct.statCrc(stat) >>> 0;
+    return { size, mtime, crc };
+  }
+  makeLibzipError(error) {
+    const errorCode = this.libzip.struct.errorCodeZip(error);
+    const strerror = this.libzip.error.strerror(error);
+    const libzipError = new LibzipError(strerror, this.libzip.errors[errorCode]);
+    if (errorCode === this.libzip.errors.ZIP_ER_CHANGED)
+      throw new Error(`Assertion failed: Unexpected libzip error: ${libzipError.message}`);
+    return libzipError;
+  }
+  setFileSource(target, compression, buffer) {
+    const lzSource = this.allocateSource(buffer);
+    try {
+      const newIndex = this.libzip.file.add(this.zip, target, lzSource, this.libzip.ZIP_FL_OVERWRITE);
+      if (newIndex === -1)
+        throw this.makeLibzipError(this.libzip.getError(this.zip));
+      if (compression !== null) {
+        const rc = this.libzip.file.setCompression(this.zip, newIndex, 0, compression[0], compression[1]);
+        if (rc === -1) {
+          throw this.makeLibzipError(this.libzip.getError(this.zip));
+        }
+      }
+      return newIndex;
+    } catch (error) {
+      this.libzip.source.free(lzSource);
+      throw error;
+    }
+  }
+  setMtime(entry, mtime) {
+    const rc = this.libzip.file.setMtime(this.zip, entry, 0, mtime, 0);
+    if (rc === -1) {
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    }
+  }
+  getExternalAttributes(index) {
+    const attrs = this.libzip.file.getExternalAttributes(this.zip, index, 0, 0, this.libzip.uint08S, this.libzip.uint32S);
+    if (attrs === -1)
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    const opsys = this.libzip.getValue(this.libzip.uint08S, `i8`) >>> 0;
+    const attributes = this.libzip.getValue(this.libzip.uint32S, `i32`) >>> 0;
+    return [opsys, attributes];
+  }
+  setExternalAttributes(index, opsys, attributes) {
+    const rc = this.libzip.file.setExternalAttributes(this.zip, index, 0, 0, opsys, attributes);
+    if (rc === -1) {
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    }
+  }
+  locate(name) {
+    return this.libzip.name.locate(this.zip, name, 0);
+  }
+  getFileSource(index) {
+    const stat = this.libzip.struct.statS();
+    const rc = this.libzip.statIndex(this.zip, index, 0, 0, stat);
+    if (rc === -1)
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    const size = this.libzip.struct.statCompSize(stat);
+    const compressionMethod = this.libzip.struct.statCompMethod(stat);
+    const buffer = this.libzip.malloc(size);
+    try {
+      const file = this.libzip.fopenIndex(this.zip, index, 0, this.libzip.ZIP_FL_COMPRESSED);
+      if (file === 0)
+        throw this.makeLibzipError(this.libzip.getError(this.zip));
+      try {
+        const rc2 = this.libzip.fread(file, buffer, size, 0);
+        if (rc2 === -1)
+          throw this.makeLibzipError(this.libzip.file.getError(file));
+        else if (rc2 < size)
+          throw new Error(`Incomplete read`);
+        else if (rc2 > size)
+          throw new Error(`Overread`);
+        const memory = this.libzip.HEAPU8.subarray(buffer, buffer + size);
+        const data = Buffer.from(memory);
+        return { data, compressionMethod };
+      } finally {
+        this.libzip.fclose(file);
+      }
+    } finally {
+      this.libzip.free(buffer);
+    }
+  }
+  deleteEntry(index) {
+    const rc = this.libzip.delete(this.zip, index);
+    if (rc === -1) {
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    }
+  }
+  addDirectory(path) {
+    const index = this.libzip.dir.add(this.zip, path);
+    if (index === -1)
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    return index;
+  }
+  getBufferAndClose() {
+    try {
+      this.libzip.source.keep(this.lzSource);
+      if (this.libzip.close(this.zip) === -1)
+        throw this.makeLibzipError(this.libzip.getError(this.zip));
+      if (this.libzip.source.open(this.lzSource) === -1)
+        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
+      if (this.libzip.source.seek(this.lzSource, 0, 0, this.libzip.SEEK_END) === -1)
+        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
+      const size = this.libzip.source.tell(this.lzSource);
+      if (size === -1)
+        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
+      if (this.libzip.source.seek(this.lzSource, 0, 0, this.libzip.SEEK_SET) === -1)
+        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
+      const buffer = this.libzip.malloc(size);
+      if (!buffer)
+        throw new Error(`Couldn't allocate enough memory`);
+      try {
+        const rc = this.libzip.source.read(this.lzSource, buffer, size);
+        if (rc === -1)
+          throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
+        else if (rc < size)
+          throw new Error(`Incomplete read`);
+        else if (rc > size)
+          throw new Error(`Overread`);
+        let result = Buffer.from(this.libzip.HEAPU8.subarray(buffer, buffer + size));
+        if (process.env.YARN_IS_TEST_ENV && process.env.YARN_ZIP_DATA_EPILOGUE)
+          result = Buffer.concat([result, Buffer.from(process.env.YARN_ZIP_DATA_EPILOGUE)]);
+        return result;
+      } finally {
+        this.libzip.free(buffer);
+      }
+    } finally {
+      this.libzip.source.close(this.lzSource);
+      this.libzip.source.free(this.lzSource);
+    }
+  }
+  allocateBuffer(content) {
+    if (!Buffer.isBuffer(content))
+      content = Buffer.from(content);
+    const buffer = this.libzip.malloc(content.byteLength);
+    if (!buffer)
+      throw new Error(`Couldn't allocate enough memory`);
+    const heap = new Uint8Array(this.libzip.HEAPU8.buffer, buffer, content.byteLength);
+    heap.set(content);
+    return { buffer, byteLength: content.byteLength };
+  }
+  allocateUnattachedSource(content) {
+    const error = this.libzip.struct.errorS();
+    const { buffer, byteLength } = this.allocateBuffer(content);
+    const source = this.libzip.source.fromUnattachedBuffer(buffer, byteLength, 0, 1, error);
+    if (source === 0) {
+      this.libzip.free(error);
+      throw this.makeLibzipError(error);
+    }
+    return source;
+  }
+  allocateSource(content) {
+    const { buffer, byteLength } = this.allocateBuffer(content);
+    const source = this.libzip.source.fromBuffer(this.zip, buffer, byteLength, 0, 1);
+    if (source === 0) {
+      this.libzip.free(buffer);
+      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    }
+    return source;
+  }
+  discard() {
+    this.libzip.discard(this.zip);
+  }
+}
+
+const ZIP_UNIX = 3;
+const STORE = 0;
+const DEFLATE = 8;
 const DEFAULT_COMPRESSION_LEVEL = `mixed`;
 function toUnixTimestamp(time) {
   if (typeof time === `string` && String(+time) === time)
@@ -7253,22 +7632,12 @@ function makeEmptyArchive() {
     0
   ]);
 }
-class LibzipError extends Error {
-  code;
-  constructor(message, code) {
-    super(message);
-    this.name = `Libzip Error`;
-    this.code = code;
-  }
-}
 class ZipFS extends BasePortableFakeFS {
-  libzip;
   baseFs;
   path;
   stats;
-  zip;
-  lzSource;
   level;
+  zipImpl;
   listings = /* @__PURE__ */ new Map();
   entries = /* @__PURE__ */ new Map();
   /**
@@ -7284,9 +7653,11 @@ class ZipFS extends BasePortableFakeFS {
   readOnly = false;
   constructor(source, opts = {}) {
     super();
+    if (opts.readOnly)
+      this.readOnly = true;
     const pathOptions = opts;
     this.level = typeof pathOptions.level !== `undefined` ? pathOptions.level : DEFAULT_COMPRESSION_LEVEL;
-    source ??= makeEmptyArchive();
+    const ZipImplCls = opts.customZipImplementation ?? LibZipImpl;
     if (typeof source === `string`) {
       const { baseFs = new NodeFS() } = pathOptions;
       this.baseFs = baseFs;
@@ -7312,36 +7683,19 @@ class ZipFS extends BasePortableFakeFS {
         this.stats = makeDefaultStats();
       }
     }
-    this.libzip = getInstance();
-    const errPtr = this.libzip.malloc(4);
-    try {
-      let flags = 0;
-      if (opts.readOnly) {
-        flags |= this.libzip.ZIP_RDONLY;
-        this.readOnly = true;
+    if (typeof source === `string`) {
+      if (opts.create) {
+        this.zipImpl = new ZipImplCls({ buffer: makeEmptyArchive(), readOnly: this.readOnly });
+      } else {
+        this.zipImpl = new ZipImplCls({ path: source, baseFs: this.baseFs, readOnly: this.readOnly, size: this.stats.size });
       }
-      if (typeof source === `string`)
-        source = pathOptions.create ? makeEmptyArchive() : this.baseFs.readFileSync(source);
-      const lzSource = this.allocateUnattachedSource(source);
-      try {
-        this.zip = this.libzip.openFromSource(lzSource, flags, errPtr);
-        this.lzSource = lzSource;
-      } catch (error) {
-        this.libzip.source.free(lzSource);
-        throw error;
-      }
-      if (this.zip === 0) {
-        const error = this.libzip.struct.errorS();
-        this.libzip.error.initWithCode(error, this.libzip.getValue(errPtr, `i32`));
-        throw this.makeLibzipError(error);
-      }
-    } finally {
-      this.libzip.free(errPtr);
+    } else {
+      this.zipImpl = new ZipImplCls({ buffer: source ?? makeEmptyArchive(), readOnly: this.readOnly });
     }
     this.listings.set(PortablePath.root, /* @__PURE__ */ new Set());
-    const entryCount = this.libzip.getNumEntries(this.zip, 0);
-    for (let t = 0; t < entryCount; ++t) {
-      const raw = this.libzip.getName(this.zip, t, 0);
+    const listings = this.zipImpl.getListings();
+    for (let t = 0; t < listings.length; t++) {
+      const raw = listings[t];
       if (ppath.isAbsolute(raw))
         continue;
       const p = ppath.resolve(PortablePath.root, raw);
@@ -7350,18 +7704,8 @@ class ZipFS extends BasePortableFakeFS {
         this.registerListing(p);
       }
     }
-    this.symlinkCount = this.libzip.ext.countSymlinks(this.zip);
-    if (this.symlinkCount === -1)
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    this.symlinkCount = this.zipImpl.getSymlinkCount();
     this.ready = true;
-  }
-  makeLibzipError(error) {
-    const errorCode = this.libzip.struct.errorCodeZip(error);
-    const strerror = this.libzip.error.strerror(error);
-    const libzipError = new LibzipError(strerror, this.libzip.errors[errorCode]);
-    if (errorCode === this.libzip.errors.ZIP_ER_CHANGED)
-      throw new Error(`Assertion failed: Unexpected libzip error: ${libzipError.message}`);
-    return libzipError;
   }
   getExtractHint(hints) {
     for (const fileName of this.entries.keys()) {
@@ -7392,45 +7736,14 @@ class ZipFS extends BasePortableFakeFS {
       return makeEmptyArchive();
     }
     try {
-      this.libzip.source.keep(this.lzSource);
-      if (this.libzip.close(this.zip) === -1)
-        throw this.makeLibzipError(this.libzip.getError(this.zip));
-      if (this.libzip.source.open(this.lzSource) === -1)
-        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
-      if (this.libzip.source.seek(this.lzSource, 0, 0, this.libzip.SEEK_END) === -1)
-        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
-      const size = this.libzip.source.tell(this.lzSource);
-      if (size === -1)
-        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
-      if (this.libzip.source.seek(this.lzSource, 0, 0, this.libzip.SEEK_SET) === -1)
-        throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
-      const buffer = this.libzip.malloc(size);
-      if (!buffer)
-        throw new Error(`Couldn't allocate enough memory`);
-      try {
-        const rc = this.libzip.source.read(this.lzSource, buffer, size);
-        if (rc === -1)
-          throw this.makeLibzipError(this.libzip.source.error(this.lzSource));
-        else if (rc < size)
-          throw new Error(`Incomplete read`);
-        else if (rc > size)
-          throw new Error(`Overread`);
-        let result = Buffer.from(this.libzip.HEAPU8.subarray(buffer, buffer + size));
-        if (process.env.YARN_IS_TEST_ENV && process.env.YARN_ZIP_DATA_EPILOGUE)
-          result = Buffer.concat([result, Buffer.from(process.env.YARN_ZIP_DATA_EPILOGUE)]);
-        return result;
-      } finally {
-        this.libzip.free(buffer);
-      }
+      return this.zipImpl.getBufferAndClose();
     } finally {
-      this.libzip.source.close(this.lzSource);
-      this.libzip.source.free(this.lzSource);
       this.ready = false;
     }
   }
   discardAndClose() {
     this.prepareClose();
-    this.libzip.discard(this.zip);
+    this.zipImpl.discard();
     this.ready = false;
   }
   saveAndClose() {
@@ -7612,7 +7925,7 @@ class ZipFS extends BasePortableFakeFS {
     let resolvedP;
     try {
       resolvedP = this.resolveFilename(`stat '${p}'`, p, void 0, false);
-    } catch (error) {
+    } catch {
       return false;
     }
     if (resolvedP === void 0)
@@ -7684,16 +7997,14 @@ class ZipFS extends BasePortableFakeFS {
   statImpl(reason, p, opts = {}) {
     const entry = this.entries.get(p);
     if (typeof entry !== `undefined`) {
-      const stat = this.libzip.struct.statS();
-      const rc = this.libzip.statIndex(this.zip, entry, 0, 0, stat);
-      if (rc === -1)
-        throw this.makeLibzipError(this.libzip.getError(this.zip));
+      const stat = this.zipImpl.stat(entry);
+      const crc = stat.crc;
+      const size = stat.size;
+      const mtimeMs = stat.mtime * 1e3;
       const uid = this.stats.uid;
       const gid = this.stats.gid;
-      const size = this.libzip.struct.statSize(stat) >>> 0;
       const blksize = 512;
-      const blocks = Math.ceil(size / blksize);
-      const mtimeMs = (this.libzip.struct.statMtime(stat) >>> 0) * 1e3;
+      const blocks = Math.ceil(stat.size / blksize);
       const atimeMs = mtimeMs;
       const birthtimeMs = mtimeMs;
       const ctimeMs = mtimeMs;
@@ -7704,7 +8015,6 @@ class ZipFS extends BasePortableFakeFS {
       const type = this.listings.has(p) ? fs.constants.S_IFDIR : this.isSymbolicLink(entry) ? fs.constants.S_IFLNK : fs.constants.S_IFREG;
       const defaultMode = type === fs.constants.S_IFDIR ? 493 : 420;
       const mode = type | this.getUnixMode(entry, defaultMode) & 511;
-      const crc = this.libzip.struct.statCrc(stat);
       const statInstance = Object.assign(new StatEntry(), { uid, gid, size, blksize, blocks, atime, birthtime, ctime, mtime, atimeMs, birthtimeMs, ctimeMs, mtimeMs, mode, crc });
       return opts.bigint === true ? convertToBigIntStats(statInstance) : statInstance;
     }
@@ -7730,13 +8040,10 @@ class ZipFS extends BasePortableFakeFS {
     throw new Error(`Unreachable`);
   }
   getUnixMode(index, defaultMode) {
-    const rc = this.libzip.file.getExternalAttributes(this.zip, index, 0, 0, this.libzip.uint08S, this.libzip.uint32S);
-    if (rc === -1)
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    const opsys = this.libzip.getValue(this.libzip.uint08S, `i8`) >>> 0;
-    if (opsys !== this.libzip.ZIP_OPSYS_UNIX)
+    const [opsys, attributes] = this.zipImpl.getExternalAttributes(index);
+    if (opsys !== ZIP_UNIX)
       return defaultMode;
-    return this.libzip.getValue(this.libzip.uint32S, `i32`) >>> 16;
+    return attributes >>> 16;
   }
   registerListing(p) {
     const existingListing = this.listings.get(p);
@@ -7771,10 +8078,7 @@ class ZipFS extends BasePortableFakeFS {
   }
   deleteEntry(p, index) {
     this.unregisterEntry(p);
-    const rc = this.libzip.delete(this.zip, index);
-    if (rc === -1) {
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    }
+    this.zipImpl.deleteEntry(index);
   }
   resolveFilename(reason, p, resolveLastComponent = true, throwIfNoEntry = true) {
     if (!this.ready)
@@ -7807,7 +8111,7 @@ class ZipFS extends BasePortableFakeFS {
       resolvedP = ppath.resolve(parentP, ppath.basename(resolvedP));
       if (!resolveLastComponent || this.symlinkCount === 0)
         break;
-      const index = this.libzip.name.locate(this.zip, resolvedP.slice(1), 0);
+      const index = this.zipImpl.locate(resolvedP.slice(1));
       if (index === -1)
         break;
       if (this.isSymbolicLink(index)) {
@@ -7819,118 +8123,57 @@ class ZipFS extends BasePortableFakeFS {
     }
     return resolvedP;
   }
-  allocateBuffer(content) {
-    if (!Buffer.isBuffer(content))
-      content = Buffer.from(content);
-    const buffer = this.libzip.malloc(content.byteLength);
-    if (!buffer)
-      throw new Error(`Couldn't allocate enough memory`);
-    const heap = new Uint8Array(this.libzip.HEAPU8.buffer, buffer, content.byteLength);
-    heap.set(content);
-    return { buffer, byteLength: content.byteLength };
-  }
-  allocateUnattachedSource(content) {
-    const error = this.libzip.struct.errorS();
-    const { buffer, byteLength } = this.allocateBuffer(content);
-    const source = this.libzip.source.fromUnattachedBuffer(buffer, byteLength, 0, 1, error);
-    if (source === 0) {
-      this.libzip.free(error);
-      throw this.makeLibzipError(error);
-    }
-    return source;
-  }
-  allocateSource(content) {
-    const { buffer, byteLength } = this.allocateBuffer(content);
-    const source = this.libzip.source.fromBuffer(this.zip, buffer, byteLength, 0, 1);
-    if (source === 0) {
-      this.libzip.free(buffer);
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    }
-    return source;
-  }
   setFileSource(p, content) {
     const buffer = Buffer.isBuffer(content) ? content : Buffer.from(content);
     const target = ppath.relative(PortablePath.root, p);
-    const lzSource = this.allocateSource(content);
-    try {
-      const newIndex = this.libzip.file.add(this.zip, target, lzSource, this.libzip.ZIP_FL_OVERWRITE);
-      if (newIndex === -1)
-        throw this.makeLibzipError(this.libzip.getError(this.zip));
-      if (this.level !== `mixed`) {
-        const method = this.level === 0 ? this.libzip.ZIP_CM_STORE : this.libzip.ZIP_CM_DEFLATE;
-        const rc = this.libzip.file.setCompression(this.zip, newIndex, 0, method, this.level);
-        if (rc === -1) {
-          throw this.makeLibzipError(this.libzip.getError(this.zip));
-        }
-      }
-      this.fileSources.set(newIndex, buffer);
-      return newIndex;
-    } catch (error) {
-      this.libzip.source.free(lzSource);
-      throw error;
+    let compression = null;
+    if (this.level !== `mixed`) {
+      const method = this.level === 0 ? STORE : DEFLATE;
+      compression = [method, this.level];
     }
+    const newIndex = this.zipImpl.setFileSource(target, compression, buffer);
+    this.fileSources.set(newIndex, buffer);
+    return newIndex;
   }
   isSymbolicLink(index) {
     if (this.symlinkCount === 0)
       return false;
-    const attrs = this.libzip.file.getExternalAttributes(this.zip, index, 0, 0, this.libzip.uint08S, this.libzip.uint32S);
-    if (attrs === -1)
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    const opsys = this.libzip.getValue(this.libzip.uint08S, `i8`) >>> 0;
-    if (opsys !== this.libzip.ZIP_OPSYS_UNIX)
+    const [opsys, attrs] = this.zipImpl.getExternalAttributes(index);
+    if (opsys !== ZIP_UNIX)
       return false;
-    const attributes = this.libzip.getValue(this.libzip.uint32S, `i32`) >>> 16;
+    const attributes = attrs >>> 16;
     return (attributes & fs.constants.S_IFMT) === fs.constants.S_IFLNK;
   }
   getFileSource(index, opts = { asyncDecompress: false }) {
     const cachedFileSource = this.fileSources.get(index);
     if (typeof cachedFileSource !== `undefined`)
       return cachedFileSource;
-    const stat = this.libzip.struct.statS();
-    const rc = this.libzip.statIndex(this.zip, index, 0, 0, stat);
-    if (rc === -1)
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    const size = this.libzip.struct.statCompSize(stat);
-    const compressionMethod = this.libzip.struct.statCompMethod(stat);
-    const buffer = this.libzip.malloc(size);
-    try {
-      const file = this.libzip.fopenIndex(this.zip, index, 0, this.libzip.ZIP_FL_COMPRESSED);
-      if (file === 0)
-        throw this.makeLibzipError(this.libzip.getError(this.zip));
-      try {
-        const rc2 = this.libzip.fread(file, buffer, size, 0);
-        if (rc2 === -1)
-          throw this.makeLibzipError(this.libzip.file.getError(file));
-        else if (rc2 < size)
-          throw new Error(`Incomplete read`);
-        else if (rc2 > size)
-          throw new Error(`Overread`);
-        const memory = this.libzip.HEAPU8.subarray(buffer, buffer + size);
-        const data = Buffer.from(memory);
-        if (compressionMethod === 0) {
-          this.fileSources.set(index, data);
-          return data;
-        } else if (opts.asyncDecompress) {
-          return new Promise((resolve, reject) => {
-            zlib__default.default.inflateRaw(data, (error, result) => {
-              if (error) {
-                reject(error);
-              } else {
+    const { data, compressionMethod } = this.zipImpl.getFileSource(index);
+    if (compressionMethod === STORE) {
+      if (this.zipImpl.filesShouldBeCached)
+        this.fileSources.set(index, data);
+      return data;
+    } else if (compressionMethod === DEFLATE) {
+      if (opts.asyncDecompress) {
+        return new Promise((resolve, reject) => {
+          zlib__default.default.inflateRaw(data, (error, result) => {
+            if (error) {
+              reject(error);
+            } else {
+              if (this.zipImpl.filesShouldBeCached)
                 this.fileSources.set(index, result);
-                resolve(result);
-              }
-            });
+              resolve(result);
+            }
           });
-        } else {
-          const decompressedData = zlib__default.default.inflateRawSync(data);
+        });
+      } else {
+        const decompressedData = zlib__default.default.inflateRawSync(data);
+        if (this.zipImpl.filesShouldBeCached)
           this.fileSources.set(index, decompressedData);
-          return decompressedData;
-        }
-      } finally {
-        this.libzip.fclose(file);
+        return decompressedData;
       }
-    } finally {
-      this.libzip.free(buffer);
+    } else {
+      throw new Error(`Unsupported compression method: ${compressionMethod}`);
     }
   }
   async fchmodPromise(fd, mask) {
@@ -7952,10 +8195,7 @@ class ZipFS extends BasePortableFakeFS {
       throw new Error(`Assertion failed: The entry should have been registered (${resolvedP})`);
     const oldMod = this.getUnixMode(entry, fs.constants.S_IFREG | 0);
     const newMod = oldMod & ~511 | mask;
-    const rc = this.libzip.file.setExternalAttributes(this.zip, entry, 0, 0, this.libzip.ZIP_OPSYS_UNIX, newMod << 16);
-    if (rc === -1) {
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    }
+    this.zipImpl.setExternalAttributes(entry, ZIP_UNIX, newMod << 16);
   }
   async fchownPromise(fd, uid, gid) {
     return this.chownPromise(this.fdToPath(fd, `fchown`), uid, gid);
@@ -8129,10 +8369,7 @@ class ZipFS extends BasePortableFakeFS {
     const entry = this.entries.get(resolvedP);
     if (entry === void 0)
       throw new Error(`Unreachable`);
-    const rc = this.libzip.file.setMtime(this.zip, entry, 0, toUnixTimestamp(mtime), 0);
-    if (rc === -1) {
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
-    }
+    this.zipImpl.setMtime(entry, toUnixTimestamp(mtime));
   }
   async mkdirPromise(p, opts) {
     return this.mkdirSync(p, opts);
@@ -8192,9 +8429,7 @@ class ZipFS extends BasePortableFakeFS {
     this.deleteEntry(p, index);
   }
   hydrateDirectory(resolvedP) {
-    const index = this.libzip.dir.add(this.zip, ppath.relative(PortablePath.root, resolvedP));
-    if (index === -1)
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    const index = this.zipImpl.addDirectory(ppath.relative(PortablePath.root, resolvedP));
     this.registerListing(resolvedP);
     this.registerEntry(resolvedP, index);
     return index;
@@ -8218,9 +8453,7 @@ class ZipFS extends BasePortableFakeFS {
       throw EEXIST(`symlink '${target}' -> '${p}'`);
     const index = this.setFileSource(resolvedP, target);
     this.registerEntry(resolvedP, index);
-    const rc = this.libzip.file.setExternalAttributes(this.zip, index, 0, 0, this.libzip.ZIP_OPSYS_UNIX, (fs.constants.S_IFLNK | 511) << 16);
-    if (rc === -1)
-      throw this.makeLibzipError(this.libzip.getError(this.zip));
+    this.zipImpl.setExternalAttributes(index, ZIP_UNIX, (fs.constants.S_IFLNK | 511) << 16);
     this.symlinkCount += 1;
   }
   async readFilePromise(p, encoding) {
@@ -8265,7 +8498,8 @@ class ZipFS extends BasePortableFakeFS {
         const entries = Array.from(directoryListing, (name) => {
           return Object.assign(this.statImpl(`lstat`, ppath.join(p, name)), {
             name,
-            path: PortablePath.dot
+            path: PortablePath.dot,
+            parentPath: PortablePath.dot
           });
         });
         for (const entry of entries) {
@@ -8276,7 +8510,8 @@ class ZipFS extends BasePortableFakeFS {
           for (const child of subListing) {
             entries.push(Object.assign(this.statImpl(`lstat`, ppath.join(p, subPath, child)), {
               name: child,
-              path: subPath
+              path: subPath,
+              parentPath: subPath
             }));
           }
         }
@@ -8297,7 +8532,8 @@ class ZipFS extends BasePortableFakeFS {
       return Array.from(directoryListing, (name) => {
         return Object.assign(this.statImpl(`lstat`, ppath.join(p, name)), {
           name,
-          path: void 0
+          path: void 0,
+          parentPath: void 0
         });
       });
     } else {
@@ -8375,10 +8611,13 @@ class ZipFS extends BasePortableFakeFS {
       } };
     const interval = setInterval(() => {
     }, 24 * 60 * 60 * 1e3);
-    return { on: () => {
-    }, close: () => {
-      clearInterval(interval);
-    } };
+    return {
+      on: () => {
+      },
+      close: () => {
+        clearInterval(interval);
+      }
+    };
   }
   watchFile(p, a, b) {
     const resolvedP = ppath.resolve(PortablePath.root, p);
@@ -8387,6 +8626,201 @@ class ZipFS extends BasePortableFakeFS {
   unwatchFile(p, cb) {
     const resolvedP = ppath.resolve(PortablePath.root, p);
     return unwatchFile(this, resolvedP, cb);
+  }
+}
+
+const SIGNATURE = {
+  CENTRAL_DIRECTORY: 33639248,
+  END_OF_CENTRAL_DIRECTORY: 101010256
+};
+const noCommentCDSize = 22;
+class JsZipImpl {
+  fd;
+  baseFs;
+  entries;
+  filesShouldBeCached = false;
+  constructor(opts) {
+    if (`buffer` in opts)
+      throw new Error(`Buffer based zip archives are not supported`);
+    if (!opts.readOnly)
+      throw new Error(`Writable zip archives are not supported`);
+    this.baseFs = opts.baseFs;
+    this.fd = this.baseFs.openSync(opts.path, `r`);
+    try {
+      this.entries = JsZipImpl.readZipSync(this.fd, this.baseFs, opts.size);
+    } catch (error) {
+      this.baseFs.closeSync(this.fd);
+      this.fd = `closed`;
+      throw error;
+    }
+  }
+  static readZipSync(fd, baseFs, fileSize) {
+    if (fileSize < noCommentCDSize)
+      throw new Error(`Invalid ZIP file: EOCD not found`);
+    let eocdOffset = -1;
+    let eocdBuffer = Buffer.alloc(noCommentCDSize);
+    baseFs.readSync(
+      fd,
+      eocdBuffer,
+      0,
+      noCommentCDSize,
+      fileSize - noCommentCDSize
+    );
+    if (eocdBuffer.readUInt32LE(0) === SIGNATURE.END_OF_CENTRAL_DIRECTORY) {
+      eocdOffset = 0;
+    } else {
+      const bufferSize = Math.min(65557, fileSize);
+      eocdBuffer = Buffer.alloc(bufferSize);
+      baseFs.readSync(
+        fd,
+        eocdBuffer,
+        0,
+        bufferSize,
+        Math.max(0, fileSize - bufferSize)
+      );
+      for (let i = eocdBuffer.length - 4; i >= 0; i--) {
+        if (eocdBuffer.readUInt32LE(i) === SIGNATURE.END_OF_CENTRAL_DIRECTORY) {
+          eocdOffset = i;
+          break;
+        }
+      }
+      if (eocdOffset === -1) {
+        throw new Error(`Not a zip archive`);
+      }
+    }
+    const totalEntries = eocdBuffer.readUInt16LE(eocdOffset + 10);
+    const centralDirSize = eocdBuffer.readUInt32LE(eocdOffset + 12);
+    const centralDirOffset = eocdBuffer.readUInt32LE(eocdOffset + 16);
+    const commentLength = eocdBuffer.readUInt16LE(eocdOffset + 20);
+    if (eocdOffset + commentLength + noCommentCDSize > eocdBuffer.length)
+      throw new Error(`Zip archive inconsistent`);
+    if (totalEntries == 65535 || centralDirSize == 4294967295 || centralDirOffset == 4294967295)
+      throw new Error(`Zip 64 is not supported`);
+    if (centralDirSize > fileSize)
+      throw new Error(`Zip archive inconsistent`);
+    if (totalEntries > centralDirSize / 46)
+      throw new Error(`Zip archive inconsistent`);
+    const cdBuffer = Buffer.alloc(centralDirSize);
+    if (baseFs.readSync(fd, cdBuffer, 0, cdBuffer.length, centralDirOffset) !== cdBuffer.length)
+      throw new Error(`Zip archive inconsistent`);
+    const entries = [];
+    let offset = 0;
+    let index = 0;
+    let sumCompressedSize = 0;
+    while (index < totalEntries) {
+      if (offset + 46 > cdBuffer.length)
+        throw new Error(`Zip archive inconsistent`);
+      if (cdBuffer.readUInt32LE(offset) !== SIGNATURE.CENTRAL_DIRECTORY)
+        throw new Error(`Zip archive inconsistent`);
+      const versionMadeBy = cdBuffer.readUInt16LE(offset + 4);
+      const os = versionMadeBy >>> 8;
+      const flags = cdBuffer.readUInt16LE(offset + 8);
+      if ((flags & 1) !== 0)
+        throw new Error(`Encrypted zip files are not supported`);
+      const compressionMethod = cdBuffer.readUInt16LE(offset + 10);
+      const crc = cdBuffer.readUInt32LE(offset + 16);
+      const nameLength = cdBuffer.readUInt16LE(offset + 28);
+      const extraLength = cdBuffer.readUInt16LE(offset + 30);
+      const commentLength2 = cdBuffer.readUInt16LE(offset + 32);
+      const localHeaderOffset = cdBuffer.readUInt32LE(offset + 42);
+      const name = cdBuffer.toString(`utf8`, offset + 46, offset + 46 + nameLength).replaceAll(`\0`, ` `);
+      if (name.includes(`\0`))
+        throw new Error(`Invalid ZIP file`);
+      const compressedSize = cdBuffer.readUInt32LE(offset + 20);
+      const externalAttributes = cdBuffer.readUInt32LE(offset + 38);
+      entries.push({
+        name,
+        os,
+        mtime: SAFE_TIME,
+        //we dont care,
+        crc,
+        compressionMethod,
+        isSymbolicLink: os === ZIP_UNIX && (externalAttributes >>> 16 & S_IFMT) === S_IFLNK,
+        size: cdBuffer.readUInt32LE(offset + 24),
+        compressedSize,
+        externalAttributes,
+        localHeaderOffset
+      });
+      sumCompressedSize += compressedSize;
+      index += 1;
+      offset += 46 + nameLength + extraLength + commentLength2;
+    }
+    if (sumCompressedSize > fileSize)
+      throw new Error(`Zip archive inconsistent`);
+    if (offset !== cdBuffer.length)
+      throw new Error(`Zip archive inconsistent`);
+    return entries;
+  }
+  getExternalAttributes(index) {
+    const entry = this.entries[index];
+    return [entry.os, entry.externalAttributes];
+  }
+  getListings() {
+    return this.entries.map((e) => e.name);
+  }
+  getSymlinkCount() {
+    let count = 0;
+    for (const entry of this.entries)
+      if (entry.isSymbolicLink)
+        count += 1;
+    return count;
+  }
+  stat(index) {
+    const entry = this.entries[index];
+    return {
+      crc: entry.crc,
+      mtime: entry.mtime,
+      size: entry.size
+    };
+  }
+  locate(name) {
+    for (let ind = 0; ind < this.entries.length; ind++)
+      if (this.entries[ind].name === name)
+        return ind;
+    return -1;
+  }
+  getFileSource(index) {
+    if (this.fd === `closed`)
+      throw new Error(`ZIP file is closed`);
+    const entry = this.entries[index];
+    const localHeaderBuf = Buffer.alloc(30);
+    this.baseFs.readSync(
+      this.fd,
+      localHeaderBuf,
+      0,
+      localHeaderBuf.length,
+      entry.localHeaderOffset
+    );
+    const nameLength = localHeaderBuf.readUInt16LE(26);
+    const extraLength = localHeaderBuf.readUInt16LE(28);
+    const buffer = Buffer.alloc(entry.compressedSize);
+    if (this.baseFs.readSync(this.fd, buffer, 0, entry.compressedSize, entry.localHeaderOffset + 30 + nameLength + extraLength) !== entry.compressedSize)
+      throw new Error(`Invalid ZIP file`);
+    return { data: buffer, compressionMethod: entry.compressionMethod };
+  }
+  discard() {
+    if (this.fd !== `closed`) {
+      this.baseFs.closeSync(this.fd);
+      this.fd = `closed`;
+    }
+  }
+  addDirectory(path) {
+    throw new Error(`Not implemented`);
+  }
+  deleteEntry(index) {
+    throw new Error(`Not implemented`);
+  }
+  setMtime(index, mtime) {
+    throw new Error(`Not implemented`);
+  }
+  getBufferAndClose() {
+    throw new Error(`Not implemented`);
+  }
+  setFileSource(target, compression, buffer) {
+    throw new Error(`Not implemented`);
+  }
+  setExternalAttributes(index, opsys, attributes) {
+    throw new Error(`Not implemented`);
   }
 }
 
@@ -8574,6 +9008,7 @@ function applyPatch(pnpapi, opts) {
       const optionNames = new Set(Object.keys(options));
       optionNames.delete(`paths`);
       optionNames.delete(`plugnplay`);
+      optionNames.delete(`conditions`);
       if (optionNames.size > 0) {
         throw makeError(
           ErrorCode.UNSUPPORTED,
@@ -8602,11 +9037,15 @@ function applyPatch(pnpapi, opts) {
       const issuerApi = apiPath !== null ? opts.manager.getApiEntry(apiPath, true).instance : null;
       try {
         if (issuerApi !== null) {
-          resolution = issuerApi.resolveRequest(request, path !== null ? `${path}/` : null);
+          resolution = issuerApi.resolveRequest(request, path !== null ? `${path}/` : null, {
+            conditions: options?.conditions
+          });
         } else {
           if (path === null)
             throw new Error(`Assertion failed: Expected the path to be set`);
-          resolution = originalModuleResolveFilename.call(require$$0.Module, request, module || makeFakeParent(path), isMain);
+          resolution = originalModuleResolveFilename.call(require$$0.Module, request, module || makeFakeParent(path), isMain, {
+            conditions: options?.conditions
+          });
         }
       } catch (error) {
         firstError = firstError || error;
@@ -8653,7 +9092,7 @@ Require stack:
         } else {
           resolution = originalFindPath.call(require$$0.Module, request, [path], isMain);
         }
-      } catch (error) {
+      } catch {
         continue;
       }
       if (resolution) {
@@ -8740,6 +9179,7 @@ function hydrateRuntimeState(data, { basePath }) {
     dependencyTreeRoots,
     enableTopLevelFallback,
     fallbackExclusionList,
+    pnpZipBackend: data.pnpZipBackend,
     fallbackPool,
     ignorePattern,
     packageLocatorsByLocations,
@@ -9736,7 +10176,7 @@ function makeApi(runtimeState, opts) {
     try {
       candidates.push(unqualifiedPath);
       stat = opts.fakeFs.statSync(unqualifiedPath);
-    } catch (error) {
+    } catch {
     }
     if (stat && !stat.isDirectory())
       return opts.fakeFs.realpathSync(unqualifiedPath);
@@ -9744,7 +10184,7 @@ function makeApi(runtimeState, opts) {
       let pkgJson;
       try {
         pkgJson = JSON.parse(opts.fakeFs.readFileSync(ppath.join(unqualifiedPath, Filename.manifest), `utf8`));
-      } catch (error) {
+      } catch {
       }
       let nextUnqualifiedPath;
       if (pkgJson && pkgJson.main)
@@ -10396,8 +10836,10 @@ const localFs = { ...fs__default.default };
 const nodeFs = new NodeFS(localFs);
 const defaultRuntimeState = $$SETUP_STATE(hydrateRuntimeState);
 const defaultPnpapiResolution = __filename;
+const customZipImplementation = defaultRuntimeState.pnpZipBackend === `js` ? JsZipImpl : void 0;
 const defaultFsLayer = new VirtualFS({
   baseFs: new ZipOpenFS({
+    customZipImplementation,
     baseFs: nodeFs,
     maxOpenFiles: 80,
     readOnlyArchives: true
