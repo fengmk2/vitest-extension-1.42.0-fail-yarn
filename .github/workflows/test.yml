@@ -12,15 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: voidzero-dev/setup-vp@v1
         with:
           node-version-file: .node-version
-
-      - name: Install vp
-        run: npm install -g vite-plus
-
-      - name: Install dependencies
-        run: vp install
 
       - name: Run tests
         run: vp test run
